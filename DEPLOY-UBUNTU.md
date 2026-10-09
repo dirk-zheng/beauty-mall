@@ -39,9 +39,9 @@ server/config/admin.js
 
 服务启动时会根据这里的配置创建或同步管理员账号。公开上线前必须修改默认密码，推荐进一步改成从环境变量读取管理员账号和密码。
 
-### 1.3 不使用示例数据库密码
+### 1.3 使用独立数据库凭据
 
-不要在生产环境直接使用 `server/sql/create.sql` 中的示例用户和密码。应按照本文后续步骤手动创建独立数据库用户。
+生产环境应按照本文后续步骤创建 Aurelia Ingredients 专用数据库用户，并使用独立的高强度密码。
 
 ## 2. 服务器要求
 
@@ -147,14 +147,14 @@ sudo mysql
 创建数据库和专用用户。请将示例密码替换为足够长的随机密码：
 
 ```sql
-CREATE DATABASE curva_denim_b2b
+CREATE DATABASE aurelia_ingredients_b2b
   CHARACTER SET utf8mb4
   COLLATE utf8mb4_0900_ai_ci;
 
 CREATE USER 'aurelia_app'@'localhost'
   IDENTIFIED BY '替换成很长的随机数据库密码';
 
-GRANT ALL PRIVILEGES ON curva_denim_b2b.* TO 'aurelia_app'@'localhost';
+GRANT ALL PRIVILEGES ON aurelia_ingredients_b2b.* TO 'aurelia_app'@'localhost';
 FLUSH PRIVILEGES;
 EXIT;
 ```
@@ -178,7 +178,7 @@ NODE_ENV=production
 
 DB_HOST=127.0.0.1
 DB_PORT=3306
-DB_NAME=curva_denim_b2b
+DB_NAME=aurelia_ingredients_b2b
 DB_USER=aurelia_app
 DB_PASSWORD=替换成数据库密码
 DB_POOL_SIZE=10
@@ -472,13 +472,13 @@ curl https://example.com/api/health
 
 ```bash
 mkdir -p /var/backups/aurelia
-mysqldump -u aurelia_app -p curva_denim_b2b | gzip > /var/backups/aurelia/curva_denim_b2b-$(date +%F-%H%M%S).sql.gz
+mysqldump -u aurelia_app -p aurelia_ingredients_b2b | gzip > /var/backups/aurelia/aurelia_ingredients_b2b-$(date +%F-%H%M%S).sql.gz
 ```
 
 恢复前应先停止写入，并确认备份文件有效。恢复示例：
 
 ```bash
-gunzip -c /var/backups/aurelia/备份文件.sql.gz | mysql -u aurelia_app -p curva_denim_b2b
+gunzip -c /var/backups/aurelia/备份文件.sql.gz | mysql -u aurelia_app -p aurelia_ingredients_b2b
 ```
 
 生产环境建议通过 cron、云数据库备份或服务器快照建立自动备份，并定期进行恢复演练。
@@ -525,7 +525,7 @@ sudo tail -n 100 /var/log/nginx/error.log
 检查 MySQL 登录：
 
 ```bash
-mysql -h 127.0.0.1 -u aurelia_app -p curva_denim_b2b
+mysql -h 127.0.0.1 -u aurelia_app -p aurelia_ingredients_b2b
 ```
 
 进入数据库后可检查表：
