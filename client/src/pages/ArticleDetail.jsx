@@ -69,7 +69,7 @@ export default function ArticleDetail({ initialArticles = [] }) {
             <div className="flex flex-wrap justify-center gap-5 text-sm text-slate-400">
               <span className="flex items-center gap-2"><CalendarDays size={16} />{formatArticleDate(article.publishedAt || article.createdAt)}</span>
               <span className="flex items-center gap-2"><Clock3 size={16} />{article.readTime}</span>
-              <span className="flex items-center gap-2"><UserRound size={16} />{article.authorName || 'Aurelia Technical Team'}</span>
+              <span className="flex items-center gap-2"><UserRound size={16} />{article.authorName || 'Aurelia Beauty Technical Team'}</span>
             </div>
           </div>
         </header>

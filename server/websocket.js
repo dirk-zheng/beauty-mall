@@ -186,9 +186,9 @@ const keywordRules = [
 ];
 
 const defaultReplies = [
-  'Thank you for contacting Aurelia Ingredients. Ask about INCI, use levels, samples, documentation, MOQ or pricing.',
+  'Thank you for contacting Aurelia Beauty. Ask about INCI, use levels, samples, documentation, MOQ or pricing.',
   'Hello! Share your formulation brief, target market, required documents and expected volume.',
-  'Welcome to Aurelia Ingredients. How can we support your raw-material evaluation?'
+  'Welcome to Aurelia Beauty. How can we support your raw-material evaluation?'
 ];
 
 //根据用户消息关键词生成客服回复
@@ -813,7 +813,7 @@ async function handleSupportMessageSend(payload, ws) {
 
     if (ws.user.role === 'guest' && customerMessageCount + 1 === 7) {
       createdMessages.push(appendMessage({
-        senderType: 'system', senderName: 'Aurelia Ingredient Support',
+        senderType: 'system', senderName: 'Aurelia Beauty Support',
         content: 'You have 3 guest messages remaining. Please register to continue chatting after the guest limit.',
       }));
     }
@@ -829,7 +829,7 @@ async function handleSupportMessageSend(payload, ws) {
         conversation.botEnabled = false;
         conversation.priority = 'high';
         createdMessages.push(appendMessage({
-          senderType: 'system', senderName: 'Aurelia Ingredient Support',
+          senderType: 'system', senderName: 'Aurelia Beauty Support',
           content: 'Your request has been added to our sales queue. A team member will join this conversation shortly.',
         }));
         larkNotification = {
@@ -903,7 +903,7 @@ async function handleSupportHandoffRequest(payload, ws) {
     conversation.resolvedAt = null;
     requested = true;
     createdMessages.push(appendMessage({
-      senderType: 'system', senderName: 'Aurelia Ingredient Support',
+      senderType: 'system', senderName: 'Aurelia Beauty Support',
       content: 'A sales representative has been requested. Please keep this window open; your conversation history will be shared with the team.',
     }));
   });
@@ -950,7 +950,7 @@ async function handleSupportClaim(payload, ws) {
     conversation.claimedByAccount = ws.user.account;
     conversation.resolvedAt = null;
     createdMessages.push(appendMessage({
-      senderType: 'system', senderName: 'Aurelia Ingredient Support',
+      senderType: 'system', senderName: 'Aurelia Beauty Support',
       content: `${conversation.assignedName} has joined the conversation as your ${ws.user.role === 'admin' ? 'support administrator' : 'sales representative'}.`,
     }));
   });
@@ -971,7 +971,7 @@ async function handleSupportTransfer(payload, ws) {
     conversation.assignedName = target.name || target.account;
     conversation.claimedByAccount = ws.user.account;
     createdMessages.push(appendMessage({
-      senderType: 'system', senderName: 'Aurelia Ingredient Support',
+      senderType: 'system', senderName: 'Aurelia Beauty Support',
       content: `This conversation has been transferred to ${conversation.assignedName}.`,
     }));
   });
@@ -989,7 +989,7 @@ async function handleSupportResolve(payload, ws) {
     conversation.botEnabled = false;
     conversation.resolvedAt = new Date().toISOString();
     createdMessages.push(appendMessage({
-      senderType: 'system', senderName: 'Aurelia Ingredient Support',
+      senderType: 'system', senderName: 'Aurelia Beauty Support',
       content: 'This conversation has been marked as resolved. Send another message whenever you need further assistance.',
     }));
   });

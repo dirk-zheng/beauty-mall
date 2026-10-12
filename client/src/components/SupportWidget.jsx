@@ -103,7 +103,7 @@ export default function SupportWidget() {
         className={`fixed bottom-6 right-6 h-[178px] w-[178px] rounded-full bg-gradient-to-br from-primary to-secondary shadow-2xl shadow-primary/30 flex items-center justify-center z-50 transition-all hover:scale-105 hover:shadow-2xl hover:shadow-primary/40 ${
           isOpen ? 'rotate-90' : ''
         }`}
-        title={isStaff ? 'Ingredient Messages' : 'Aurelia Ingredient Support'}
+        title={isStaff ? 'Ingredient Messages' : 'Aurelia Beauty Support'}
         aria-label={isOpen ? 'Close ingredient support' : 'Open ingredient support'}
       >
         {/* Big Red Dot */}

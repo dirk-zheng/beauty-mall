@@ -1,4 +1,4 @@
-# Aurelia Ingredients 美妆原料平台规格
+# Aurelia Beauty 美妆原料平台规格
 
 ## 1. 产品目标
 

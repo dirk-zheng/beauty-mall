@@ -18,7 +18,7 @@ export default function ServicePage() {
             <h1 className="font-heading text-4xl md:text-6xl font-bold leading-tight mb-6">{service.title}</h1>
             <p className="text-lg text-slate-300 leading-relaxed">{service.intro}</p>
           </div>
-          <img src={service.image} alt="Aurelia cosmetic ingredient and formulation support" className="w-full aspect-[4/3] object-cover rounded-3xl border border-white/10" width="800" height="600" />
+          <img src={service.image} alt="Aurelia Beauty cosmetic ingredient and formulation support" className="w-full aspect-[4/3] object-cover rounded-3xl border border-white/10" width="800" height="600" />
         </div>
       </header>
       <main className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">

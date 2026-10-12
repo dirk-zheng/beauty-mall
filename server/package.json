@@ -1,7 +1,7 @@
 {
-  "name": "aurelia-ingredients-server",
+  "name": "aurelia-beauty-server",
   "version": "1.0.0",
-  "description": "Aurelia Ingredients 美妆原料展示、技术支持与询价后端",
+  "description": "Aurelia Beauty 美妆原料展示、技术支持与询价后端",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",

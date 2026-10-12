@@ -42,9 +42,9 @@ const keywordRules = [
 
 // Default fallback replies
 const defaultReplies = [
-  'Thank you for contacting Aurelia Ingredients. Ask about INCI, use levels, samples, documentation, MOQ or pricing.',
+  'Thank you for contacting Aurelia Beauty. Ask about INCI, use levels, samples, documentation, MOQ or pricing.',
   'Hello! Share your formulation brief, target market, required documents and expected volume.',
-  'Welcome to Aurelia Ingredients. How can we support your raw-material evaluation?'
+  'Welcome to Aurelia Beauty. How can we support your raw-material evaluation?'
 ];
 
 // Get AI response based on keywords

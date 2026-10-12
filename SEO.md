@@ -1,8 +1,8 @@
-# Aurelia Ingredients B2B SEO Strategy
+# Aurelia Beauty B2B SEO Strategy
 
 ## Positioning
 
-Aurelia Ingredients supplies cosmetic actives, botanical extracts and functional materials to formulators, brands, manufacturers, laboratories and ingredient distributors. Search pages should move qualified technical buyers toward material evaluation, documentation, samples and RFQs.
+Aurelia Beauty supplies cosmetic actives, botanical extracts and functional materials to formulators, brands, manufacturers, laboratories and ingredient distributors. Search pages should move qualified technical buyers toward material evaluation, documentation, samples and RFQs.
 
 ## Primary Search Themes
 
@@ -37,7 +37,7 @@ Account, admin, RFQ and internal support routes remain `noindex`.
 
 ## Metadata and Structured Data
 
-- Use `Aurelia Ingredients` as the site and Organization display name.
+- Use `Aurelia Beauty` as the site and Organization display name.
 - The canonical origin remains configurable through `VITE_SITE_URL` and `SITE_URL`.
 - Product schema should expose INCI, recommended use, solubility, pack sizes, MOQ and lead time.
 - Do not publish `Offer`, public unit pricing or inventory until commercial terms are confirmed.

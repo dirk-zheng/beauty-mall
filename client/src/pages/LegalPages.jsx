@@ -31,7 +31,7 @@ export function PrivacyPolicy() {
 
 export function TermsOfUse() {
   return <LegalLayout eyebrow="Legal" title="Terms of Use">
-    <p>These terms govern use of the Aurelia Ingredients website. By creating a technical sourcing account or submitting a business inquiry, you confirm you are at least 18 and authorized to act for the business identified.</p>
+    <p>These terms govern use of the Aurelia Beauty website. By creating a technical sourcing account or submitting a business inquiry, you confirm you are at least 18 and authorized to act for the business identified.</p>
     <h2>Business inquiries only</h2><p>The site is intended for professional cosmetic raw-material evaluation, not consumer purchases or medical advice. Specifications, suggested use levels, pack sizes, lead times, pricing and availability are informational until confirmed in a written quotation, approved specification, purchase order acceptance or proforma invoice.</p>
     <h2>Accounts and acceptable use</h2><p>Provide accurate information, protect account credentials, and promptly report unauthorized use. Do not probe security, automate abusive requests, upload unlawful material, impersonate others, or interfere with the service.</p>
     <h2>Samples, orders, and compliance</h2><p>Samples and production goods may vary within agreed tolerances. Binding specifications, labeling, testing, warranties, payment, shipping, returns, and governing terms must appear in the applicable written sales documents. Buyers remain responsible for confirming intended-market requirements.</p>

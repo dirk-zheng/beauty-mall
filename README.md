@@ -1,6 +1,6 @@
-# Aurelia Ingredients B2B
+# Aurelia Beauty B2B
 
-Aurelia Ingredients 是面向化妆品配方师、品牌、生产商、实验室和原料分销商的美妆原料 B2B 项目。网站围绕原料检索、技术资料、评估样品、商业包装和 RFQ 展开，不提供消费者购物或医疗建议。
+Aurelia Beauty 是面向化妆品配方师、品牌、生产商、实验室和原料分销商的美妆原料 B2B 项目。网站围绕原料检索、技术资料、评估样品、商业包装和 RFQ 展开，不提供消费者购物或医疗建议。
 
 ## 业务范围
 
@@ -66,7 +66,7 @@ npm run preview
 
 ## 环境配置
 
-生产环境必须配置站点 URL、JWT、数据库和通知渠道。现有 `aureliabeauty.com` 域名及邮箱可继续作为基础设施地址，展示品牌统一为 Aurelia Ingredients。不要提交真实密钥。
+生产环境必须配置站点 URL、JWT、数据库和通知渠道。现有 `aureliabeauty.com` 域名及邮箱可继续作为基础设施地址，展示品牌统一为 Aurelia Beauty。不要提交真实密钥。
 
 ## 上线边界
 

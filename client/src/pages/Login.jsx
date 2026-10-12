@@ -63,7 +63,7 @@ export default function Login() {
               <span className="text-white font-heading font-bold text-3xl">C</span>
             </div>
             <div>
-              <h1 className="font-heading text-3xl font-bold text-dark-900">Aurelia Ingredients</h1>
+              <h1 className="font-heading text-3xl font-bold text-dark-900">Aurelia Beauty</h1>
               <p className="text-dark-500">Technical Sourcing Portal</p>
             </div>
           </div>
@@ -71,7 +71,7 @@ export default function Login() {
           <h2 className="text-4xl font-heading font-bold text-dark-900 mb-4 leading-tight">
             Welcome to<br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
-              Aurelia Ingredients
+              Aurelia Beauty
             </span>
           </h2>
 
