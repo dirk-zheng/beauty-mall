@@ -191,6 +191,10 @@ export const imAPI = {
 // ─── 管理员内容与用户 API ─────────────────────────
 
 export const adminAPI = {
+  getInquiries: () => wsClient.send('admin.inquiries.list'),
+  assignInquiry: (id, account) => wsClient.send('admin.inquiries.assign', { id, account }),
+  updateInquiryStatus: (id, status) => wsClient.send('admin.inquiries.status', { id, status }),
+  addInquiryFollowUp: (id, followUp) => wsClient.send('admin.inquiries.follow-up', { id, ...followUp }),
   getUsers: () => {
               //处理回调函数逻辑
               return wsClient.send('admin.users');

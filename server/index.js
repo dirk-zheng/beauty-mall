@@ -124,7 +124,7 @@ async function startServer() {
   wsServer = createWSServer(server);
   server.listen(PORT, HOST, () => {
   console.log('╔══════════════════════════════════════════╗');
-  console.log('║     Aurelia Pretty                       ║');
+  console.log('║     Aurelia Beauty                       ║');
   console.log('║     Modern Beauty · Global Partners      ║');
   console.log(`║   HTTP:   http://${displayHost}:${PORT}                    ║`);
   console.log(`║   WS:     ws://${displayHost}:${PORT}/ws                    ║`);

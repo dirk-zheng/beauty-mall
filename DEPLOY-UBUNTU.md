@@ -1,6 +1,6 @@
-# Aurelia Pretty Ubuntu 生产部署指南
+# Aurelia Beauty Ubuntu 生产部署指南
 
-本文档以当前仓库中的 Aurelia Pretty B2B 版本为准，适用于将前端、Node.js 服务端、WebSocket 和 MySQL 部署到单台 Ubuntu 服务器。
+本文档以当前仓库中的 Aurelia Beauty B2B 版本为准，适用于将前端、Node.js 服务端、WebSocket 和 MySQL 部署到单台 Ubuntu 服务器。
 
 推荐架构：
 
@@ -87,13 +87,13 @@ server/config/admin.js
 
 ## 3. 上传代码
 
-以下示例将项目部署到 `/var/www/aurelia-pretty`：
+以下示例将项目部署到 `/var/www/aurelia-beauty`：
 
 ```bash
-sudo mkdir -p /var/www/aurelia-pretty
-sudo chown -R "$USER":"$USER" /var/www/aurelia-pretty
-git clone <你的仓库地址> /var/www/aurelia-pretty
-cd /var/www/aurelia-pretty
+sudo mkdir -p /var/www/aurelia-beauty
+sudo chown -R "$USER":"$USER" /var/www/aurelia-beauty
+git clone <你的仓库地址> /var/www/aurelia-beauty
+cd /var/www/aurelia-beauty
 ```
 
 如果不通过 Git 部署，也可以使用 `rsync`、SFTP 或服务器管理面板上传。不要上传本地的 `node_modules`。
@@ -103,14 +103,14 @@ cd /var/www/aurelia-pretty
 安装前端依赖：
 
 ```bash
-cd /var/www/aurelia-pretty/client
+cd /var/www/aurelia-beauty/client
 npm ci
 ```
 
 创建前端生产环境文件：
 
 ```bash
-nano /var/www/aurelia-pretty/client/.env.production.local
+nano /var/www/aurelia-beauty/client/.env.production.local
 ```
 
 示例内容：
@@ -119,14 +119,14 @@ nano /var/www/aurelia-pretty/client/.env.production.local
 VITE_SITE_URL=https://example.com
 VITE_LEGAL_BUSINESS_NAME=你的公司法定名称
 VITE_BUSINESS_POSTAL_ADDRESS=你的业务邮寄地址
-VITE_PRIVACY_EMAIL=privacy@example.com
-VITE_INQUIRIES_EMAIL=sales@example.com
+VITE_PRIVACY_EMAIL=curva88820@gmail.com
+VITE_INQUIRIES_EMAIL=curva88820@gmail.com
 ```
 
 执行构建：
 
 ```bash
-cd /var/www/aurelia-pretty/client
+cd /var/www/aurelia-beauty/client
 NODE_ENV=production npm run build
 ```
 
@@ -142,7 +142,7 @@ NODE_ENV=production npm run build
 确认构建结果：
 
 ```bash
-test -f /var/www/aurelia-pretty/client/dist/index.html && echo "Frontend build OK"
+test -f /var/www/aurelia-beauty/client/dist/index.html && echo "Frontend build OK"
 ```
 
 注意：所有 `VITE_` 开头的变量都会进入浏览器构建产物，不能在其中保存密码、Token 或其他秘密。
@@ -150,7 +150,7 @@ test -f /var/www/aurelia-pretty/client/dist/index.html && echo "Frontend build O
 安装服务端生产依赖：
 
 ```bash
-cd /var/www/aurelia-pretty/server
+cd /var/www/aurelia-beauty/server
 npm ci --omit=dev
 ```
 
@@ -169,17 +169,17 @@ sudo systemctl status mysql
 sudo mysql
 ```
 
-创建 Aurelia Pretty 数据库和专用用户：
+创建 Aurelia Beauty 数据库和专用用户：
 
 ```sql
-CREATE DATABASE aurelia_pretty_b2b
+CREATE DATABASE aurelia_beauty_b2b
   CHARACTER SET utf8mb4
   COLLATE utf8mb4_0900_ai_ci;
 
 CREATE USER 'aurelia_app'@'localhost'
   IDENTIFIED BY '替换成很长的随机数据库密码';
 
-GRANT ALL PRIVILEGES ON aurelia_pretty_b2b.* TO 'aurelia_app'@'localhost';
+GRANT ALL PRIVILEGES ON aurelia_beauty_b2b.* TO 'aurelia_app'@'localhost';
 FLUSH PRIVILEGES;
 EXIT;
 ```
@@ -187,13 +187,13 @@ EXIT;
 导入表结构：
 
 ```bash
-sudo mysql < /var/www/aurelia-pretty/server/sql/schema.sql
+sudo mysql < /var/www/aurelia-beauty/server/sql/schema.sql
 ```
 
 检查表是否创建成功：
 
 ```bash
-sudo mysql -e "USE aurelia_pretty_b2b; SHOW TABLES;"
+sudo mysql -e "USE aurelia_beauty_b2b; SHOW TABLES;"
 ```
 
 应该能看到用户、访客事件、RFQ、询盘、客服会话、即时通信和隐私请求等数据表。
@@ -205,7 +205,7 @@ sudo mysql -e "USE aurelia_pretty_b2b; SHOW TABLES;"
 从示例文件复制：
 
 ```bash
-cd /var/www/aurelia-pretty/server
+cd /var/www/aurelia-beauty/server
 cp .env.example .env
 nano .env
 ```
@@ -219,7 +219,7 @@ NODE_ENV=production
 
 DB_HOST=127.0.0.1
 DB_PORT=3306
-DB_NAME=aurelia_pretty_b2b
+DB_NAME=aurelia_beauty_b2b
 DB_USER=aurelia_app
 DB_PASSWORD=替换成数据库密码
 DB_POOL_SIZE=10
@@ -231,13 +231,13 @@ TRUST_PROXY=loopback
 
 ADMIN_ACCOUNT=admin
 ADMIN_PASSWORD=替换成至少12字符的强管理员密码
-ADMIN_NAME=Aurelia Pretty Admin
+ADMIN_NAME=Aurelia Beauty Admin
 
 LEGAL_BUSINESS_NAME="你的公司法定名称"
 BUSINESS_POSTAL_ADDRESS="你的业务邮寄地址"
-PRIVACY_REQUEST_OWNER=privacy@example.com
-INCIDENT_RESPONSE_EMAIL=security@example.com
-PRODUCT_COMPLIANCE_OWNER=compliance@example.com
+PRIVACY_REQUEST_OWNER=curva88820@gmail.com
+INCIDENT_RESPONSE_EMAIL=curva88820@gmail.com
+PRODUCT_COMPLIANCE_OWNER=curva88820@gmail.com
 
 LARK_NOTIFICATIONS_ENABLED=false
 LARK_WEBHOOK_URL=
@@ -254,7 +254,7 @@ openssl rand -hex 32
 限制环境文件权限：
 
 ```bash
-chmod 600 /var/www/aurelia-pretty/server/.env
+chmod 600 /var/www/aurelia-beauty/server/.env
 ```
 
 配置说明：
@@ -275,7 +275,7 @@ chmod 600 /var/www/aurelia-pretty/server/.env
 直接启动一次服务：
 
 ```bash
-cd /var/www/aurelia-pretty/server
+cd /var/www/aurelia-beauty/server
 npm start
 ```
 
@@ -320,23 +320,23 @@ whoami
 创建服务文件：
 
 ```bash
-sudo nano /etc/systemd/system/aurelia-pretty.service
+sudo nano /etc/systemd/system/aurelia-beauty.service
 ```
 
 写入以下内容，将 `User=ubuntu` 替换为实际部署用户：
 
 ```ini
 [Unit]
-Description=Aurelia Pretty B2B Server
+Description=Aurelia Beauty B2B Server
 After=network.target mysql.service
 Requires=mysql.service
 
 [Service]
 Type=simple
 User=ubuntu
-WorkingDirectory=/var/www/aurelia-pretty/server
-EnvironmentFile=/var/www/aurelia-pretty/server/.env
-ExecStart=/usr/bin/node /var/www/aurelia-pretty/server/index.js
+WorkingDirectory=/var/www/aurelia-beauty/server
+EnvironmentFile=/var/www/aurelia-beauty/server/.env
+ExecStart=/usr/bin/node /var/www/aurelia-beauty/server/index.js
 Restart=always
 RestartSec=5
 TimeoutStopSec=20
@@ -350,26 +350,26 @@ WantedBy=multi-user.target
 
 ```bash
 sudo systemctl daemon-reload
-sudo systemctl enable --now aurelia-pretty
-sudo systemctl status aurelia-pretty
+sudo systemctl enable --now aurelia-beauty
+sudo systemctl status aurelia-beauty
 ```
 
 查看实时日志：
 
 ```bash
-sudo journalctl -u aurelia-pretty -f
+sudo journalctl -u aurelia-beauty -f
 ```
 
 查看最近 100 行日志：
 
 ```bash
-sudo journalctl -u aurelia-pretty -n 100 --no-pager
+sudo journalctl -u aurelia-beauty -n 100 --no-pager
 ```
 
 修改代码或环境变量后重启：
 
 ```bash
-sudo systemctl restart aurelia-pretty
+sudo systemctl restart aurelia-beauty
 ```
 
 ## 9. 配置 Nginx 与 WebSocket
@@ -377,7 +377,7 @@ sudo systemctl restart aurelia-pretty
 创建站点配置：
 
 ```bash
-sudo nano /etc/nginx/sites-available/aurelia-pretty
+sudo nano /etc/nginx/sites-available/aurelia-beauty
 ```
 
 写入以下内容，将域名替换为实际域名：
@@ -421,7 +421,7 @@ server {
 启用站点：
 
 ```bash
-sudo ln -s /etc/nginx/sites-available/aurelia-pretty /etc/nginx/sites-enabled/aurelia-pretty
+sudo ln -s /etc/nginx/sites-available/aurelia-beauty /etc/nginx/sites-enabled/aurelia-beauty
 sudo nginx -t
 sudo systemctl reload nginx
 ```
@@ -479,7 +479,7 @@ sudo ufw status
 ### 12.1 服务状态
 
 ```bash
-sudo systemctl status aurelia-pretty
+sudo systemctl status aurelia-beauty
 sudo systemctl status nginx
 sudo systemctl status mysql
 ```
@@ -523,21 +523,21 @@ curl https://example.com/api/health
 先拉取代码：
 
 ```bash
-cd /var/www/aurelia-pretty
+cd /var/www/aurelia-beauty
 git pull
 ```
 
 更新服务端依赖：
 
 ```bash
-cd /var/www/aurelia-pretty/server
+cd /var/www/aurelia-beauty/server
 npm ci --omit=dev
 ```
 
 重新构建前端：
 
 ```bash
-cd /var/www/aurelia-pretty/client
+cd /var/www/aurelia-beauty/client
 npm ci
 NODE_ENV=production npm run build
 ```
@@ -545,8 +545,8 @@ NODE_ENV=production npm run build
 重启服务并验证：
 
 ```bash
-sudo systemctl restart aurelia-pretty
-sudo systemctl status aurelia-pretty
+sudo systemctl restart aurelia-beauty
+sudo systemctl status aurelia-beauty
 curl https://example.com/api/health
 ```
 
@@ -581,8 +581,8 @@ MySQL 保存：
 检查权限：
 
 ```bash
-sudo chown -R ubuntu:ubuntu /var/www/aurelia-pretty/server/data
-sudo chmod -R u+rwX,go-rwx /var/www/aurelia-pretty/server/data
+sudo chown -R ubuntu:ubuntu /var/www/aurelia-beauty/server/data
+sudo chmod -R u+rwX,go-rwx /var/www/aurelia-beauty/server/data
 ```
 
 将 `ubuntu:ubuntu` 替换为 systemd 服务实际使用的用户和用户组。
@@ -592,27 +592,27 @@ sudo chmod -R u+rwX,go-rwx /var/www/aurelia-pretty/server/data
 创建备份目录：
 
 ```bash
-sudo mkdir -p /var/backups/aurelia-pretty
-sudo chown "$USER":"$USER" /var/backups/aurelia-pretty
+sudo mkdir -p /var/backups/aurelia-beauty
+sudo chown "$USER":"$USER" /var/backups/aurelia-beauty
 ```
 
 备份 MySQL：
 
 ```bash
-mysqldump -u aurelia_app -p aurelia_pretty_b2b | gzip > /var/backups/aurelia-pretty/mysql-$(date +%F-%H%M%S).sql.gz
+mysqldump -u aurelia_app -p aurelia_beauty_b2b | gzip > /var/backups/aurelia-beauty/mysql-$(date +%F-%H%M%S).sql.gz
 ```
 
 备份 JSON 内容：
 
 ```bash
-tar -czf /var/backups/aurelia-pretty/content-$(date +%F-%H%M%S).tar.gz \
-  -C /var/www/aurelia-pretty/server data
+tar -czf /var/backups/aurelia-beauty/content-$(date +%F-%H%M%S).tar.gz \
+  -C /var/www/aurelia-beauty/server data
 ```
 
 恢复 MySQL 示例：
 
 ```bash
-gunzip -c /var/backups/aurelia-pretty/备份文件.sql.gz | mysql -u aurelia_app -p aurelia_pretty_b2b
+gunzip -c /var/backups/aurelia-beauty/备份文件.sql.gz | mysql -u aurelia_app -p aurelia_beauty_b2b
 ```
 
 生产环境应配置定时备份，并定期验证备份能否成功恢复。
@@ -622,7 +622,7 @@ gunzip -c /var/backups/aurelia-pretty/备份文件.sql.gz | mysql -u aurelia_app
 ### 16.1 Node.js 服务启动后立即退出
 
 ```bash
-sudo journalctl -u aurelia-pretty -n 100 --no-pager
+sudo journalctl -u aurelia-beauty -n 100 --no-pager
 ```
 
 重点检查：
@@ -637,7 +637,7 @@ sudo journalctl -u aurelia-pretty -n 100 --no-pager
 ### 16.2 Nginx 返回 502
 
 ```bash
-sudo systemctl status aurelia-pretty
+sudo systemctl status aurelia-beauty
 curl http://127.0.0.1:3001/api/health
 sudo tail -n 100 /var/log/nginx/error.log
 ```
@@ -665,7 +665,7 @@ sudo tail -f /var/log/nginx/access.log /var/log/nginx/error.log
 测试数据库账号：
 
 ```bash
-mysql -h 127.0.0.1 -u aurelia_app -p aurelia_pretty_b2b
+mysql -h 127.0.0.1 -u aurelia_app -p aurelia_beauty_b2b
 ```
 
 进入后检查：
@@ -688,7 +688,7 @@ SHOW TABLES;
 检查 systemd 用户是否拥有写权限：
 
 ```bash
-ls -la /var/www/aurelia-pretty/server/data
+ls -la /var/www/aurelia-beauty/server/data
 ```
 
 同时确认自动部署流程没有使用仓库里的旧 JSON 文件覆盖服务器内容。

@@ -5,7 +5,7 @@ import { useAuth } from '../context/AuthContext';
 import wsClient from '../api/ws';
 import FloatingSupport from './FloatingSupport';
 
-const CLICKED_KEY = 'aurelia_pretty_support_clicked';
+const CLICKED_KEY = 'aurelia_beauty_support_clicked';
 
 //渲染:渲染SupportWidget组件或页面内容
 export default function SupportWidget() {
@@ -103,7 +103,7 @@ export default function SupportWidget() {
         className={`fixed bottom-6 right-6 h-[178px] w-[178px] rounded-full bg-gradient-to-br from-primary to-secondary shadow-2xl shadow-primary/30 flex items-center justify-center z-50 transition-all hover:scale-105 hover:shadow-2xl hover:shadow-primary/40 ${
           isOpen ? 'rotate-90' : ''
         }`}
-        title={isStaff ? 'Partner Messages' : 'Aurelia Pretty Partnership Support'}
+        title={isStaff ? 'Partner Messages' : 'Aurelia Beauty Partnership Support'}
         aria-label={isOpen ? 'Close beauty partnership support' : 'Open beauty partnership support'}
       >
         {/* Big Red Dot */}

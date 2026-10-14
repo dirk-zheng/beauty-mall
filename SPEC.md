@@ -1,95 +1,45 @@
-# Aurelia Pretty B2B 产品规格
+# Aurelia Beauty OEM/ODM 产品规格
 
 ## 1. 产品目标
 
-建立面向零售商、分销商、电商渠道、工作场所、酒店及品牌合作方的防护类个护产品 B2B 网站，以产品评估、样品申请、合作询盘和多 SKU RFQ 为核心转化。
+建立面向美妆品牌、零售商、分销商和电商团队的 OEM/ODM 获客与销售协作平台。首发聚焦唇妆和防晒，以产品方案、询盘、RFQ、线索分配和跟进闭环为核心。
 
-系统不服务消费者直接购买：不显示公开零售价，不提供消费者购物车、促销倒计时、免邮或零售退货承诺。
+## 2. 首发范围
 
-## 2. 目录范围
+合法分类仅包含 lip-care 与 sun-care，共 7 个产品方案：
 
-合法分类为：protective-products、lip-care 与 sun-care。
+- 唇妆：Designer Lipstick、Traditional Lipsticks、Color Changing Lipsticks
+- 防晒：Sunscreen Spray、Sunscreen Gel、Sunscreen Cream & Lotion、Sunscreen Stick
 
-当前固定产品为 12 款：
+公开页展示产品定位、规格、参考 MOQ、交期、质量检查点和询盘入口，不展示未经确认的零售价或实时库存。
 
-1. Hand Sanitizer
-2. Sanitizer Alcohol Spray
-3. Scented Sanitizers
-4. Hand Wash
-5. Antiseptic Cream
-6. Designer Lipstick
-7. Traditional Lipsticks
-8. Color Changing Lipsticks
-9. Sunscreen Spray
-10. Sunscreen Gel
-11. Sunscreen Cream & Lotion
-12. Sunscreen Stick
+## 3. 转化流程
 
-产品名称、目录结构和参考图片基于 Global Cosmetics Protective Products、Sunscreen SPF 与 Lipsticks 页面；描述为项目原创改写。每条产品数据保留 sourceUrl 与 imageSource 以便追溯。
+公共询盘无需登录，收集联系人、公司、市场、销售渠道、产品方向、数量、目标价格、包装和交付要求。登录用户可建立多产品 RFQ。
 
-## 3. 商品模型
+所有询盘进入统一销售漏斗：
 
-公开商品页展示名称、品类、来源参考图、产品说明、产品定位、规格或包装范围、使用提示、参考 MOQ、待确认交期以及报价和样品入口。
+New → Contacted → Qualified → Sampling → Quoted → Won / Lost
 
-核心字段：
+- 管理员：查看全部询盘并分配负责人；
+- 销售：仅查看分配给自己的询盘；
+- 负责人：更新阶段、记录跟进内容与渠道、设置下一次跟进时间；
+- 系统：保留分配、状态变化和跟进轨迹。
 
-- 标识：id、name、category
-- 展示：image、gallery、description、benefit、badge
-- 规格：specs、applications、sizes、qc
-- 商务：moq、leadTime
-- 追溯：sourceUrl、imageSource
-- 兼容：price、stock
+## 4. 产品开发边界
 
-price 和 stock 仅作为后台兼容字段；公开页面与 Product JSON-LD 不输出未经确认的价格 Offer。
+- 唇妆关注 shade、finish、payoff、wear、sensory、bullet integrity 和包装系统；
+- 防晒关注 format、texture、UV protection direction、SPF/broad-spectrum/water-resistance testing 和包装相容性；
+- MOQ、交期、宣称、成分、标签和市场准入以最终样品、测试、规格与报价为准；
+- 第三方图片与资料在正式商用前必须取得授权或替换。
 
-## 4. 图片与内容策略
+## 5. 验收标准
 
-- 当前产品图片保存在 client/public/product-images/，产品数据使用站内路径；
-- 详情页显示来源链接及商用授权提醒；
-- 正式上线前必须取得图片、商标与内容使用许可，或替换为自有/已授权素材；
-- 当前目录图仅作来源产品参考，授权确认后应替换为正式高分辨率素材，并可迁移到自有对象存储或 CDN；
-- 不逐字复制来源站描述，所有站内描述与规格摘要采用重新编写的表达。
-
-## 5. 宣称与合规
-
-- antiseptic、antibacterial、杀菌率、酒精含量等宣称必须对应最终配方、测试证据和目标市场法规；
-- Hand Wash 来源页存在需要进一步核实的酒精含量表述，项目不直接采纳该项宣称；
-- MOQ 和周期使用 Typical、Confirm、Subject to approval 等限定语；
-- INCI、标签语言、过敏原、危险品运输、包装相容性和市场准入责任需在订单中确认；
-- 使用说明仅作目录级参考，最终以获批标签为准。
-
-## 6. 转化流程
-
-### 公共合作询盘
-
-无需登录即可提交联系人、公司、商务邮箱、业务类型、销售渠道、目标市场、感兴趣产品、预计数量、配方或香型、包装要求、目标交付窗口和补充说明。
-
-表单只创建合作线索，不创建 PO，也不保证价格、产能、合规状态或交期。
-
-### 登录 RFQ
-
-1. 合作方登录；
-2. 从商品详情添加多个产品；
-3. 填写各产品参考数量；
-4. 补充市场、包装、标签、配方、香型、宣称、合规与交付要求；
-5. 提交 RFQ，由商务团队确认样品、测试与报价。
-
-## 7. 内容体系
-
-- Protective Products：5 款产品目录及详情
-- Wholesale & Private Label：合作、打样、包材、订单与交付
-- Protective-Care Range：使用场景与产品组合
-- Formula, Claims & Quality：稳定性、包材相容性、标签、批次与宣称
-- Journal：产品格式、质量审批与渠道合作内容
-- FAQ：产品、定制、MOQ、宣称、图片授权与生产周期
-
-## 8. 验收标准
-
-- Collection 呈现 12 款产品与 protective-products、lip-care、sun-care 三个分类；
-- 前端筛选、后台新增/编辑及 WebSocket 商品校验接受新分类；
-- 每款产品展示对应来源图片、标题、原创描述与来源链接；
-- 商品卡与详情展示规格、定位、MOQ、周期和合作 CTA；
-- SEO 结构化数据正确处理远程 HTTPS 图片；
-- FAQ、文章、服务与客服知识不再围绕旧护肤、彩妆和香氛目录；
-- README 明确第三方图片授权与远程依赖风险；
-- 构建、预渲染、JSON 和服务端语法检查通过。
+- 前台只呈现 3 个唇妆和 4 个防晒方案；
+- 产品新增/编辑仅接受 lip-care 和 sun-care；
+- 公开询盘与登录 RFQ 都进入同一询盘池；
+- 管理员可以分配负责人，销售权限按负责人隔离；
+- 询盘可按阶段、负责人和关键词筛选；
+- 每条询盘可记录跟进渠道、内容和下一次跟进时间；
+- 首页、服务、FAQ、文章、客服知识、SEO 和文档不再出现旧防护用品业务；
+- 客户端构建、JSON 和服务端语法检查通过。

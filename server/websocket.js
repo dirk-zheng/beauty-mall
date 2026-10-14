@@ -155,40 +155,18 @@ function buildRfqAssortmentItems(visitorId) {
 
 // ─── Support (AI) ────────────────────────────────
 const keywordRules = [
-  {
-    keywords: ['skin', 'routine', 'ritual', 'dry', 'oily', 'sensitive', 'hydrate'],
-    response: 'Skin Ritual Support ✨\n\nTell us how your skin feels and what finish you enjoy. We can help you layer essence, serum and moisturizer into a simple, flexible ritual.'
-  },
-  {
-    keywords: ['moq', 'minimum order', 'sample', 'quantity', 'private label', 'assortment', 'opening order', 'trial order'],
-    response: 'Flexible Beauty Partnerships 📦\n\nStart with hand sanitizer, spray, scented sanitizer, hand wash, cream, lipstick or sunscreen spray, gel, lotion or stick. MOQ, private-label options, claims and timing are confirmed by formula, testing and packaging.'
-  },
-  {
-    keywords: ['document', 'report', 'customs', 'clearance', 'stability test', 'compatibility test', 'ingredient list', 'compliance'],
-    response: 'Product & Order Documents 📄\n\nIngredients, directions, cautions, packaging specifications and available test documents are confirmed by formula and market.'
-  },
-  {
-    keywords: ['price', 'cost', 'how much', 'cheap', 'discount', 'promotion', 'pricing', 'quote'],
-    response: 'Beauty Partnership Quotation 💰\n\nPricing depends on formula, shade, component, decoration, packaging and volume. Send the products and quantities you need.'
-  },
-  {
-    keywords: ['shipping', 'delivery', 'logistics', 'transport', 'how long', 'freight', 'tracking'],
-    response: 'Order & Export Support 🚢\n\nShipment planning, carton marks, packing lists, commercial invoices and standard export coordination follow the confirmed order and Incoterms. The buyer’s importer-of-record, customs, duties and U.S. compliance responsibilities are agreed before shipment.'
-  },
-  {
-    keywords: ['return', 'refund', 'warranty', 'quality', 'damage', 'defect', 'exchange', 'inspect', 'inspection', 'qc', 'fill weight', 'shade', 'packaging'],
-    response: 'Beauty Quality Support 🛡️\n\nQuality review can cover formula stability, shade, fill weight, packaging compatibility, labels, batch coding and packing.'
-  },
-  {
-    keywords: ['payment', 'pay', 'method', 'wire', 'bank', 'credit', 'terms', 'TT', 'LC'],
-    response: 'Order Terms 💳\n\nPayment terms are confirmed clearly in the quotation and proforma invoice for each order. Our team keeps the order, QC, loading and document requirements aligned so there are no surprises before shipment.'
-  }
+  { keywords: ['lipstick', 'lip color', 'shade', 'matte', 'satin', 'payoff', 'wear'], response: 'Lip Makeup Development\n\nShare your target consumer, finish, shade references, payoff, wear, packaging, price position and quantity. We can turn that into a sample brief.' },
+  { keywords: ['sunscreen', 'spf', 'sun care', 'spray', 'gel', 'lotion', 'sun stick', 'uv'], response: 'Sun Care Development\n\nChoose spray, gel, cream, lotion or stick, then share the target market, texture, SPF direction, supporting claims, packaging and quantity.' },
+  { keywords: ['moq', 'minimum order', 'sample', 'quantity', 'private label', 'opening order', 'trial order'], response: 'OEM/ODM Commercial Scope\n\nCurrent reference programs generally start around 10,000 units per order, with 5,000 per color or formulation type. Final MOQ follows the formula and packaging brief.' },
+  { keywords: ['document', 'report', 'customs', 'clearance', 'stability test', 'compatibility test', 'ingredient list', 'compliance'], response: 'Testing & Documents\n\nIngredients, stability, compatibility, claim evidence, directions, cautions and available market documents are confirmed for the final formula and pack.' },
+  { keywords: ['price', 'cost', 'how much', 'pricing', 'quote'], response: 'OEM/ODM Quotation\n\nPricing depends on formula, shade or SPF direction, component, decoration, packaging and volume. Share the brief for a qualified quotation.' },
+  { keywords: ['shipping', 'delivery', 'logistics', 'transport', 'how long', 'freight', 'tracking'], response: 'Production & Delivery\n\nTiming and shipment planning follow formula, testing, packaging and artwork approval. Delivery terms are confirmed in the quotation and order documents.' },
+  { keywords: ['quality', 'damage', 'defect', 'inspect', 'inspection', 'qc', 'fill weight', 'packaging'], response: 'Quality Review\n\nQuality checkpoints can cover formula stability, shade or SPF evidence, fill weight, packaging compatibility, labels, coding and packing.' }
 ];
-
 const defaultReplies = [
-  'Thank you for contacting Aurelia Pretty. Ask about products, samples, pricing, rituals or private label.',
-  'Hello! Share your beauty goals, audience, target price and desired launch window.',
-  'Welcome to Aurelia Pretty. How can we help with your ritual or partnership?'
+  'Tell us whether you are developing lip makeup or sun care, plus your market, quantity, target price and launch timing.',
+  'Share your product brief and we will help define the next development step.',
+  'Ask about formats, customization, samples, testing, MOQ or quotation.'
 ];
 
 //根据用户消息关键词生成客服回复
@@ -211,7 +189,7 @@ function validateProduct(body) {
   const errors = [];
   if (!body.name || body.name.length < 2 || body.name.length > 100)
     errors.push('Product name must be 2-100 characters');
-  if (!body.category || !['protective-products', 'lip-care', 'sun-care'].includes(body.category))
+  if (!body.category || !['lip-care', 'sun-care'].includes(body.category))
     errors.push('Please select a valid product category');
   if (!body.image)
     errors.push('Please provide a product image URL');
@@ -801,7 +779,7 @@ async function handleSupportMessageSend(payload, ws) {
 
     if (ws.user.role === 'guest' && customerMessageCount + 1 === 7) {
       createdMessages.push(appendMessage({
-        senderType: 'system', senderName: 'Aurelia Pretty Support',
+        senderType: 'system', senderName: 'Aurelia Beauty Support',
         content: 'You have 3 guest messages remaining. Please register to continue chatting after the guest limit.',
       }));
     }
@@ -817,7 +795,7 @@ async function handleSupportMessageSend(payload, ws) {
         conversation.botEnabled = false;
         conversation.priority = 'high';
         createdMessages.push(appendMessage({
-          senderType: 'system', senderName: 'Aurelia Pretty Support',
+          senderType: 'system', senderName: 'Aurelia Beauty Support',
           content: 'Your request has been added to our sales queue. A team member will join this conversation shortly.',
         }));
         larkNotification = {
@@ -891,7 +869,7 @@ async function handleSupportHandoffRequest(payload, ws) {
     conversation.resolvedAt = null;
     requested = true;
     createdMessages.push(appendMessage({
-      senderType: 'system', senderName: 'Aurelia Pretty Support',
+      senderType: 'system', senderName: 'Aurelia Beauty Support',
       content: 'A sales representative has been requested. Please keep this window open; your conversation history will be shared with the team.',
     }));
   });
@@ -938,7 +916,7 @@ async function handleSupportClaim(payload, ws) {
     conversation.claimedByAccount = ws.user.account;
     conversation.resolvedAt = null;
     createdMessages.push(appendMessage({
-      senderType: 'system', senderName: 'Aurelia Pretty Support',
+      senderType: 'system', senderName: 'Aurelia Beauty Support',
       content: `${conversation.assignedName} has joined the conversation as your ${ws.user.role === 'admin' ? 'support administrator' : 'sales representative'}.`,
     }));
   });
@@ -959,7 +937,7 @@ async function handleSupportTransfer(payload, ws) {
     conversation.assignedName = target.name || target.account;
     conversation.claimedByAccount = ws.user.account;
     createdMessages.push(appendMessage({
-      senderType: 'system', senderName: 'Aurelia Pretty Support',
+      senderType: 'system', senderName: 'Aurelia Beauty Support',
       content: `This conversation has been transferred to ${conversation.assignedName}.`,
     }));
   });
@@ -977,7 +955,7 @@ async function handleSupportResolve(payload, ws) {
     conversation.botEnabled = false;
     conversation.resolvedAt = new Date().toISOString();
     createdMessages.push(appendMessage({
-      senderType: 'system', senderName: 'Aurelia Pretty Support',
+      senderType: 'system', senderName: 'Aurelia Beauty Support',
       content: 'This conversation has been marked as resolved. Send another message whenever you need further assistance.',
     }));
   });
@@ -1046,6 +1024,108 @@ async function handleAdminUpdateUserRole(payload, ws) {
   return safeUser;
 }
 
+const INQUIRY_STATUSES = ['new', 'contacted', 'qualified', 'sampling', 'quoted', 'won', 'lost'];
+
+function inquiryCanEdit(inquiry, ws) {
+  return ws.user.role === 'admin' || inquiry.assignedAccount === ws.user.account;
+}
+
+function inquiryActivity(type, ws, details = {}) {
+  return {
+    id: uuidv4(), type,
+    actorAccount: ws.user.account,
+    actorName: ws.user.name || ws.user.account,
+    createdAt: new Date().toISOString(),
+    ...details,
+  };
+}
+
+function handleAdminInquiriesList(payload, ws) {
+  checkAuth(ws);
+  checkStaff(ws);
+  const inquiries = readQuotes()
+    .filter((item) => ws.user.role === 'admin' || item.assignedAccount === ws.user.account)
+    .map((item) => ({
+      ...item,
+      status: INQUIRY_STATUSES.includes(item.status) ? item.status : 'new',
+      followUps: Array.isArray(item.followUps) ? item.followUps : [],
+      activity: Array.isArray(item.activity) ? item.activity : [],
+    }))
+    .sort((a, b) => new Date(b.updatedAt || b.createdAt) - new Date(a.updatedAt || a.createdAt));
+  return {
+    inquiries,
+    staff: ws.user.role === 'admin'
+      ? supportStaffUsers().map(({ account, name, role }) => ({ account, name, role }))
+      : [],
+    statuses: INQUIRY_STATUSES,
+  };
+}
+
+async function handleAdminInquiryAssign(payload, ws) {
+  checkAuth(ws);
+  checkAdmin(ws);
+  const inquiry = db.get('quotes', String(payload?.id || ''));
+  if (!inquiry) throw new Error('Inquiry not found');
+  const account = String(payload?.account || '').trim().toLowerCase();
+  const target = supportStaffUsers().find((user) => user.account === account);
+  if (!target) throw new Error('Select a valid sales or administrator account');
+  const now = new Date().toISOString();
+  const updated = {
+    ...inquiry,
+    assignedAccount: target.account,
+    assignedName: target.name || target.account,
+    assignedAt: now,
+    updatedAt: now,
+    updatedBy: ws.user.account,
+    activity: [...(Array.isArray(inquiry.activity) ? inquiry.activity : []), inquiryActivity('assigned', ws, { assignedAccount: target.account, assignedName: target.name || target.account })],
+  };
+  await db.upsert('quotes', updated.id, updated);
+  return updated;
+}
+
+async function handleAdminInquiryStatus(payload, ws) {
+  checkAuth(ws);
+  checkStaff(ws);
+  const inquiry = db.get('quotes', String(payload?.id || ''));
+  if (!inquiry) throw new Error('Inquiry not found');
+  if (!inquiryCanEdit(inquiry, ws)) throw new Error('Assign this inquiry before updating it');
+  const status = String(payload?.status || '');
+  if (!INQUIRY_STATUSES.includes(status)) throw new Error('Invalid inquiry status');
+  const updated = {
+    ...inquiry,
+    status,
+    updatedAt: new Date().toISOString(),
+    updatedBy: ws.user.account,
+    activity: [...(Array.isArray(inquiry.activity) ? inquiry.activity : []), inquiryActivity('status_changed', ws, { fromStatus: inquiry.status || 'new', toStatus: status })],
+  };
+  await db.upsert('quotes', updated.id, updated);
+  return updated;
+}
+
+async function handleAdminInquiryFollowUp(payload, ws) {
+  checkAuth(ws);
+  checkStaff(ws);
+  const inquiry = db.get('quotes', String(payload?.id || ''));
+  if (!inquiry) throw new Error('Inquiry not found');
+  if (!inquiryCanEdit(inquiry, ws)) throw new Error('Assign this inquiry before adding a follow-up');
+  const content = String(payload?.content || '').trim();
+  const channel = String(payload?.channel || 'email').trim();
+  if (content.length < 2 || content.length > 2000) throw new Error('Follow-up note must be 2-2000 characters');
+  if (!['email', 'phone', 'whatsapp', 'meeting', 'other'].includes(channel)) throw new Error('Invalid follow-up channel');
+  const nextFollowUpAt = payload?.nextFollowUpAt ? new Date(payload.nextFollowUpAt).toISOString() : null;
+  const followUp = inquiryActivity('follow_up', ws, { content, channel, nextFollowUpAt });
+  const updated = {
+    ...inquiry,
+    followUps: [...(Array.isArray(inquiry.followUps) ? inquiry.followUps : []), followUp],
+    nextFollowUpAt,
+    lastFollowUpAt: followUp.createdAt,
+    updatedAt: followUp.createdAt,
+    updatedBy: ws.user.account,
+    activity: [...(Array.isArray(inquiry.activity) ? inquiry.activity : []), followUp],
+  };
+  await db.upsert('quotes', updated.id, updated);
+  return updated;
+}
 function handleAdminPrivacyRequests(payload, ws) {
   checkAuth(ws);
   checkAdmin(ws);
@@ -1315,6 +1395,10 @@ const handlers = {
   'admin.users.update-role': { fn: handleAdminUpdateUserRole, auth: true },
   'admin.privacy.requests': { fn: handleAdminPrivacyRequests, auth: true },
   'admin.privacy.requests.update': { fn: handleAdminPrivacyRequestUpdate, auth: true },
+  'admin.inquiries.list': { fn: handleAdminInquiriesList, auth: true },
+  'admin.inquiries.assign': { fn: handleAdminInquiryAssign, auth: true },
+  'admin.inquiries.status': { fn: handleAdminInquiryStatus, auth: true },
+  'admin.inquiries.follow-up': { fn: handleAdminInquiryFollowUp, auth: true },
   'admin.articles.list':{ fn: handleAdminArticlesList, auth: true },
   'admin.articles.create': { fn: handleAdminArticleCreate, auth: true },
   'admin.articles.delete': { fn: handleAdminArticleDelete, auth: true },

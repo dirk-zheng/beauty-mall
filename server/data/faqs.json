@@ -1,50 +1,8 @@
 [
-  {
-    "id": "faq-range",
-    "category": "Products",
-    "question": "Which products are available?",
-    "answer": "The current collection includes hand sanitizer, sanitizer alcohol spray, scented sanitizers, hand wash, an antiseptic cream concept, three lipstick programs, sunscreen spray, sunscreen gel, sunscreen cream and lotion, and sunscreen stick. Formula, testing, packaging and market suitability are confirmed during inquiry.",
-    "status": "published",
-    "sortOrder": 10
-  },
-  {
-    "id": "faq-formats",
-    "category": "Customization",
-    "question": "Can formula, fragrance and packaging be customized?",
-    "answer": "Yes. Available options can include fragrance, viscosity, color, pack size, dispensing format, decoration and labels. Feasibility depends on the product brief, test plan and destination market.",
-    "status": "published",
-    "sortOrder": 20
-  },
-  {
-    "id": "faq-moq",
-    "category": "Ordering",
-    "question": "What is the minimum order quantity?",
-    "answer": "The source catalog lists a typical 10,000-unit order for the hand sanitizer and sanitizer spray. Other products are confirmed by formula, fragrance and packaging format before quotation.",
-    "status": "published",
-    "sortOrder": 30
-  },
-  {
-    "id": "faq-claims",
-    "category": "Compliance",
-    "question": "Are antiseptic and antibacterial claims guaranteed?",
-    "answer": "No claim should be treated as final until the exact formula, testing evidence, label wording and destination-market rules have been reviewed. Quotations and samples should identify the approved claim set.",
-    "status": "published",
-    "sortOrder": 40
-  },
-  {
-    "id": "faq-images",
-    "category": "Content",
-    "question": "Can the catalog images be used commercially?",
-    "answer": "The current website references images from the source catalog for product identification. Commercial publication, advertising and redistribution require confirmation that the necessary image and trademark permissions are in place.",
-    "status": "published",
-    "sortOrder": 50
-  },
-  {
-    "id": "faq-lead",
-    "category": "Ordering",
-    "question": "What is the production lead time?",
-    "answer": "Lead time is confirmed after formula, packaging, artwork, testing and order terms are approved. The website does not publish an unverified fixed production schedule.",
-    "status": "published",
-    "sortOrder": 60
-  }
+  {"id":"faq-range","category":"Products","question":"Which product programs are available?","answer":"The launch portfolio includes three lipstick programs and four sunscreen formats: spray, gel, cream or lotion, and stick. Formula, shade or SPF direction, packaging, testing and market suitability are confirmed during qualification.","status":"published","sortOrder":10},
+  {"id":"faq-custom","category":"Customization","question":"What can be customized?","answer":"Lip projects can cover shade, finish, payoff, wear, fragrance and packaging. Sun-care projects can cover format, texture, finish, supporting skincare benefits, component and decoration. Feasibility and claims depend on the final formula and destination market.","status":"published","sortOrder":20},
+  {"id":"faq-moq","category":"Ordering","question":"What is the minimum order quantity?","answer":"The current reference programs generally indicate 10,000 units per order and 5,000 units per color or formulation type. Final MOQ depends on formula, shade count, component, decoration and sourcing requirements.","status":"published","sortOrder":30},
+  {"id":"faq-samples","category":"Development","question":"How does sampling work?","answer":"After the commercial and product brief is qualified, the team confirms the sample scope, reference standards, costs where applicable and the approval plan. Production does not begin until the agreed formula and packaging direction are approved.","status":"published","sortOrder":40},
+  {"id":"faq-spf","category":"Compliance","question":"Are SPF and broad-spectrum claims guaranteed?","answer":"No. SPF, broad-spectrum, water-resistance and related claims must be supported by testing on the final formula and reviewed against the rules of the destination market before labels are approved.","status":"published","sortOrder":50},
+  {"id":"faq-lead","category":"Ordering","question":"What is the production lead time?","answer":"Lead time is confirmed after formula, shade or SPF testing, packaging, artwork and commercial terms are approved. The website does not publish an unverified fixed production schedule.","status":"published","sortOrder":60}
 ]

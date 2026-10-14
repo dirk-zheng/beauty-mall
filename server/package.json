@@ -1,7 +1,7 @@
 {
-  "name": "aurelia-pretty-server",
+  "name": "aurelia-beauty-server",
   "version": "1.0.0",
-  "description": "Aurelia Pretty 美妆品牌站与合作询盘后端",
+  "description": "Aurelia Beauty 美妆品牌站与合作询盘后端",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",

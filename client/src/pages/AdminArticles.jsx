@@ -41,7 +41,7 @@ export default function AdminArticles() {
         <header className="mb-8">
           <p className="mb-2 text-sm font-semibold uppercase tracking-wider text-primary">Admin</p>
           <h1 className="font-heading text-4xl font-bold text-slate-900">Beauty resource publishing</h1>
-          <p className="mt-2 text-slate-500">Prepare product, quality and partnership articles for protective-care buyers.</p>
+          <p className="mt-2 text-slate-500">Prepare lip makeup, sun-care, quality and OEM/ODM development articles.</p>
         </header>
         <div className="grid gap-8 lg:grid-cols-[1fr_.9fr]">
           <form onSubmit={submit} className="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm">

@@ -10,41 +10,19 @@ const router = express.Router();
 
 // AI Keyword matching configuration
 const keywordRules = [
-  {
-    keywords: ['skin', 'routine', 'ritual', 'dry', 'oily', 'sensitive', 'hydrate'],
-    response: 'Skin Ritual Support ✨\n\nTell us how your skin feels and what finish you enjoy. We can help you layer essence, serum and moisturizer into a simple, flexible ritual.'
-  },
-  {
-    keywords: ['moq', 'minimum order', 'sample', 'quantity', 'private label', 'assortment', 'opening order', 'trial order'],
-    response: 'Flexible Beauty Partnerships 📦\n\nStart with hand sanitizer, spray, scented sanitizer, hand wash, cream, lipstick or sunscreen spray, gel, lotion or stick. MOQ, samples, claims and timing are confirmed by formula, testing and packaging.'
-  },
-  {
-    keywords: ['document', 'report', 'customs', 'clearance', 'stability test', 'compatibility test', 'ingredient list', 'compliance'],
-    response: 'Product Documents 📄\n\nIngredients, directions, cautions, packaging specifications and available test documents are confirmed by formula and market.'
-  },
-  {
-    keywords: ['price', 'cost', 'how much', 'cheap', 'discount', 'promotion', 'pricing', 'quote'],
-    response: 'Beauty Partnership Quotation 💰\n\nShare the formulas, shades, packaging, target market and estimated quantity. Pricing follows the confirmed specification and volume.'
-  },
-  {
-    keywords: ['shipping', 'delivery', 'logistics', 'transport', 'how long', 'freight', 'tracking'],
-    response: 'Order & Delivery Support 🚢\n\nShipment planning, cartons, commercial documents and delivery coordination follow the confirmed order. Market compliance responsibilities are agreed before production.'
-  },
-  {
-    keywords: ['return', 'refund', 'warranty', 'quality', 'damage', 'defect', 'exchange', 'inspect', 'inspection', 'qc', 'fill weight', 'shade', 'packaging'],
-    response: 'Beauty Quality Support 🛡️\n\nQuality review can cover formula stability, shade, fill weight, packaging compatibility, labels, batch coding and packing.'
-  },
-  {
-    keywords: ['payment', 'pay', 'method', 'wire', 'bank', 'credit', 'terms', 'TT', 'LC'],
-    response: 'Order Terms 💳\n\nPayment terms are confirmed clearly in the quotation and proforma invoice for each order. We keep order, QC, loading and document requirements aligned before shipment.'
-  }
+  { keywords: ['lipstick', 'lip color', 'shade', 'matte', 'satin', 'payoff', 'wear'], response: 'Lip Makeup Development\n\nShare your target consumer, finish, shade references, payoff, wear, packaging, price position and quantity. We can turn that into a sample brief.' },
+  { keywords: ['sunscreen', 'spf', 'sun care', 'spray', 'gel', 'lotion', 'sun stick', 'uv'], response: 'Sun Care Development\n\nChoose spray, gel, cream, lotion or stick, then share the target market, texture, SPF direction, supporting claims, packaging and quantity.' },
+  { keywords: ['moq', 'minimum order', 'sample', 'quantity', 'private label', 'opening order', 'trial order'], response: 'OEM/ODM Commercial Scope\n\nCurrent reference programs generally start around 10,000 units per order, with 5,000 per color or formulation type. Final MOQ follows the formula and packaging brief.' },
+  { keywords: ['document', 'report', 'customs', 'clearance', 'stability test', 'compatibility test', 'ingredient list', 'compliance'], response: 'Testing & Documents\n\nIngredients, stability, compatibility, claim evidence, directions, cautions and available market documents are confirmed for the final formula and pack.' },
+  { keywords: ['price', 'cost', 'how much', 'pricing', 'quote'], response: 'OEM/ODM Quotation\n\nPricing depends on formula, shade or SPF direction, component, decoration, packaging and volume. Share the brief for a qualified quotation.' },
+  { keywords: ['shipping', 'delivery', 'logistics', 'transport', 'how long', 'freight', 'tracking'], response: 'Production & Delivery\n\nTiming and shipment planning follow formula, testing, packaging and artwork approval. Delivery terms are confirmed in the quotation and order documents.' },
+  { keywords: ['quality', 'damage', 'defect', 'inspect', 'inspection', 'qc', 'fill weight', 'packaging'], response: 'Quality Review\n\nQuality checkpoints can cover formula stability, shade or SPF evidence, fill weight, packaging compatibility, labels, coding and packing.' }
 ];
-
 // Default fallback replies
 const defaultReplies = [
-  'Thank you for contacting Aurelia Pretty. Ask about products, samples, pricing, rituals or private label.',
-  'Hello! Share your beauty goals, audience, target price and desired launch window.',
-  'Welcome to Aurelia Pretty. How can we help make your next ritual or partnership more luminous?'
+  'Tell us whether you are developing lip makeup or sun care, plus your market, quantity, target price and launch timing.',
+  'Share your product brief and we will help define the next development step.',
+  'Ask about formats, customization, samples, testing, MOQ or quotation.'
 ];
 
 // Get AI response based on keywords

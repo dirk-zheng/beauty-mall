@@ -76,8 +76,8 @@ export default function NewsBlog({ initialArticles = [] }) {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-24">
           <div className="max-w-3xl animate-slide-up">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-orange-400/20 bg-orange-400/10 text-orange-200 text-sm mb-6"><BookOpen size={15} />Beauty Partner Resources</div>
-            <h1 className="font-heading text-4xl md:text-6xl font-bold leading-tight mb-5">Beauty notes for<br />your everyday ritual.</h1>
-            <p className="text-lg text-slate-300 leading-relaxed max-w-2xl">Thoughtful guidance on skin rituals, ingredients, modern color, intimate scent and beauty partnerships.</p>
+            <h1 className="font-heading text-4xl md:text-6xl font-bold leading-tight mb-5">Practical notes for<br />better product launches.</h1>
+            <p className="text-lg text-slate-300 leading-relaxed max-w-2xl">Guidance on lip makeup, sunscreen, packaging, testing and OEM/ODM development.</p>
           </div>
         </div>
       </section>

@@ -26,6 +26,7 @@ import AdminArticles from './pages/AdminArticles';
 import AdminFaqs from './pages/AdminFaqs';
 import SupportInbox from './pages/SupportInbox';
 import AdminPrivacyRequests from './pages/AdminPrivacyRequests';
+import AdminInquiries from './pages/AdminInquiries';
 import { RequireAuth, RequireAdmin, RequireStaff } from './components/ProtectedRoute';
 import { behaviorAPI } from './api';
 import { getPrivacyPreferences, PRIVACY_EVENT } from './privacy';
@@ -117,6 +118,7 @@ export function AppContent({ initialProducts = [], initialFaqs = [], initialArti
                 <Route path="/admin/articles" element={<RequireAdmin><AdminArticles /></RequireAdmin>} />
                 <Route path="/admin/faqs" element={<RequireAdmin><AdminFaqs /></RequireAdmin>} />
                 <Route path="/admin/privacy" element={<RequireAdmin><AdminPrivacyRequests /></RequireAdmin>} />
+                <Route path="/admin/inquiries" element={<RequireStaff><AdminInquiries /></RequireStaff>} />
                 <Route path="/support/inbox" element={<RequireStaff><SupportInbox /></RequireStaff>} />
                 <Route path="/404" element={<NotFound />} />
                 <Route path="*" element={<NotFound />} />
