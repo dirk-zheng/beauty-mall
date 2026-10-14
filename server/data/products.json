@@ -229,5 +229,141 @@
       "SPF and broad-spectrum performance tested on the final formula",
       "Component compatibility, fill weight and destination-market labels approved"
     ]
+  },
+  {
+    "id": "gel-cream-face-cleansers-015",
+    "name": "Gel/Cream Face Cleansers",
+    "category": "face-cleanser",
+    "image": "https://www.global-cosmetics.com/wp-content/uploads/2021/08/LaRoche-PosayTolerianeHydratingGentleCleanser-2443680acb684e9595eb20575f79c140.jpg",
+    "gallery": [
+      "https://www.global-cosmetics.com/wp-content/uploads/2021/08/LaRoche-PosayTolerianeHydratingGentleCleanser-2443680acb684e9595eb20575f79c140.jpg",
+      "https://www.global-cosmetics.com/wp-content/uploads/2021/05/depositphotos_424764322-stock-photo-pure-white-cream-texture-as-1.jpg"
+    ],
+    "imageFit": "cover",
+    "description": "A customizable OEM/ODM gel or cream cleanser program developed for gentle daily cleansing, a comfortable after-feel and texture profiles tailored to the intended skin type and market.",
+    "specs": [
+      "Gel and cream texture directions",
+      "Mild-cleansing and comfortable-after-feel targets",
+      "Can be developed for oily, combination or general skin-care positioning",
+      "Source catalog lists production capacity of up to 40,000 units daily",
+      "Final ingredients, skin-type claims and performance require formula-specific review"
+    ],
+    "applications": "Massage the approved finished formula onto damp skin, then rinse as directed. Exact amount, frequency, eye-area guidance and cautions must follow the final label.",
+    "sizes": "Custom tube / pump / bottle formats",
+    "benefit": "Gentle cleanse + comfortable finish",
+    "badge": "Gel & cream",
+    "moq": "10,000 units / order; 5,000 / formulation type",
+    "leadTime": "Confirm after formula, testing and packaging approval",
+    "price": 0,
+    "stock": 0,
+    "sourceUrl": "https://www.global-cosmetics.com/cosmetic-manufacture-products/oem-odm-skin-care/face-cleanser/",
+    "imageSource": "Types & Styles gallery on the linked Global Cosmetics Face Cleanser page",
+    "qc": [
+      "Cleansing performance, skin feel and formula stability reviewed",
+      "Viscosity, fill weight, closure and packaging compatibility checked",
+      "Ingredients, directions, claims and destination-market labels approved"
+    ]
+  },
+  {
+    "id": "foam-face-cleansers-016",
+    "name": "Foam Face Cleansers",
+    "category": "face-cleanser",
+    "image": "https://www.global-cosmetics.com/wp-content/uploads/2021/08/Ds.jpg",
+    "gallery": [
+      "https://www.global-cosmetics.com/wp-content/uploads/2021/08/Ds.jpg",
+      "https://www.global-cosmetics.com/wp-content/uploads/2021/05/abstract-white-soapy-foam-texture-shampoo-foam-with-bubbles_49683-3829-1.jpg"
+    ],
+    "imageFit": "cover",
+    "description": "A lightweight OEM/ODM foaming cleanser program designed to create a rich lather with water while balancing impurity removal, rinse feel and post-cleanse comfort.",
+    "specs": [
+      "Cream-to-foam and gel-to-foam directions",
+      "Custom lather density, rinse profile and skin feel",
+      "Pump, tube and bottle packaging options",
+      "Source catalog lists production capacity of up to 40,000 units daily",
+      "Cleansing and hydration-related claims require final-formula testing"
+    ],
+    "applications": "Work the approved formula into a lather with water, massage over the face and rinse thoroughly. Final directions and cautions must follow the approved product label.",
+    "sizes": "Custom pump / tube / bottle formats",
+    "benefit": "Rich lather + balanced cleansing",
+    "badge": "Foam cleanser",
+    "moq": "10,000 units / order; 5,000 / formulation type",
+    "leadTime": "Confirm after formula, testing and packaging approval",
+    "price": 0,
+    "stock": 0,
+    "sourceUrl": "https://www.global-cosmetics.com/cosmetic-manufacture-products/oem-odm-skin-care/face-cleanser/",
+    "imageSource": "Types & Styles gallery on the linked Global Cosmetics Face Cleanser page",
+    "qc": [
+      "Foam volume, cleansing performance and rinse feel reviewed",
+      "Pump or tube performance, fill weight and compatibility checked",
+      "Stability, claims and destination-market labels approved"
+    ]
+  },
+  {
+    "id": "oil-face-cleansers-017",
+    "name": "Oil Face Cleansers",
+    "category": "face-cleanser",
+    "image": "https://www.global-cosmetics.com/wp-content/uploads/2021/08/oil_new1.jpg",
+    "gallery": [
+      "https://www.global-cosmetics.com/wp-content/uploads/2021/08/oil_new1.jpg",
+      "https://www.global-cosmetics.com/wp-content/uploads/2021/05/00179_nourishing_omega_rich_cleansing_oil_texture_2000x2000.jpg"
+    ],
+    "imageFit": "cover",
+    "description": "An OEM/ODM cleansing-oil program for first-step or double-cleansing routines, developed around makeup and sunscreen removal, emulsification, rinse performance and a low-residue finish.",
+    "specs": [
+      "Custom oil blend and emulsification profile",
+      "Makeup, sunscreen and daily-impurity removal targets",
+      "Low-residue rinse and comfortable skin-feel direction",
+      "Source catalog lists production capacity of up to 40,000 units daily",
+      "Pore, residue and performance claims require final-formula testing"
+    ],
+    "applications": "Massage the approved formula onto dry skin, emulsify with water and rinse according to the final label. Eye-area use and cautions require formula-specific approval.",
+    "sizes": "Custom pump / bottle formats",
+    "benefit": "Makeup removal + clean rinse",
+    "badge": "Cleansing oil",
+    "moq": "10,000 units / order; 5,000 / formulation type",
+    "leadTime": "Confirm after formula, testing and packaging approval",
+    "price": 0,
+    "stock": 0,
+    "sourceUrl": "https://www.global-cosmetics.com/cosmetic-manufacture-products/oem-odm-skin-care/face-cleanser/",
+    "imageSource": "Types & Styles gallery on the linked Global Cosmetics Face Cleanser page",
+    "qc": [
+      "Removal performance, emulsification and rinse residue reviewed",
+      "Oil stability, pump output, leakage and pack compatibility checked",
+      "Ingredients, claims and destination-market labels approved"
+    ]
+  },
+  {
+    "id": "micellar-face-cleanser-018",
+    "name": "Micellar Face Cleanser",
+    "category": "face-cleanser",
+    "image": "/product-images/face-cleanser-micellar.jpg",
+    "gallery": [
+      "/product-images/face-cleanser-micellar.jpg",
+      "/product-images/face-cleanser-micellar-texture.jpg"
+    ],
+    "imageFit": "cover",
+    "description": "A lightweight OEM/ODM micellar cleanser program for no-rinse removal of makeup, surface impurities and excess oil, with soothing and hydration-support directions available to brief.",
+    "specs": [
+      "No-rinse micellar cleansing format",
+      "Sensitive-skin and daily-use positioning can be developed to brief",
+      "Custom soothing and hydration-support direction",
+      "Source catalog lists production capacity of up to 40,000 units daily",
+      "Eye-area, sensitive-skin and no-rinse claims require final-formula review"
+    ],
+    "applications": "Apply the approved formula to a cotton pad and sweep over the face as directed. Eye-area use, rinsing guidance, frequency and cautions must follow the final label.",
+    "sizes": "Custom bottle / pump formats",
+    "benefit": "No-rinse cleanse + refreshed feel",
+    "badge": "Micellar water",
+    "moq": "10,000 units / order; 5,000 / formulation type",
+    "leadTime": "Confirm after formula, testing and packaging approval",
+    "price": 0,
+    "stock": 0,
+    "sourceUrl": "https://www.global-cosmetics.com/cosmetic-manufacture-products/oem-odm-skin-care/face-cleanser/",
+    "imageSource": "Local copies from the Types & Styles gallery on the linked Global Cosmetics Face Cleanser page",
+    "qc": [
+      "Makeup-removal performance and skin feel reviewed",
+      "Formula stability, fill weight and packaging compatibility checked",
+      "Eye-area guidance, claims and destination-market labels approved"
+    ]
   }
 ]

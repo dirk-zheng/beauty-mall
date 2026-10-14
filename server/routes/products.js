@@ -113,7 +113,7 @@ router.post('/', authenticateToken, requireAdmin, (req, res) => {
     if (!name || name.length < 2 || name.length > 100) {
       errors.push('Product name must be 2-100 characters');
     }
-    if (!category || !['lip-care', 'sun-care'].includes(category)) {
+    if (!category || !['lip-care', 'sun-care', 'face-cleanser'].includes(category)) {
       errors.push('Please select a valid product category');
     }
     if (!image) {
@@ -171,7 +171,7 @@ router.put('/:id', authenticateToken, requireAdmin, (req, res) => {
     if (!name || name.length < 2 || name.length > 100) {
       errors.push('Product name must be 2-100 characters');
     }
-    if (!category || !['lip-care', 'sun-care'].includes(category)) {
+    if (!category || !['lip-care', 'sun-care', 'face-cleanser'].includes(category)) {
       errors.push('Please select a valid product category');
     }
     if (!image) {

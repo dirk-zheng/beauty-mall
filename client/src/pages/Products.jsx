@@ -22,9 +22,9 @@ export default function Products() {
       <div className="relative">
         <p className="text-xs font-bold uppercase tracking-[.26em] text-[#b42346]">Aurelia B2B Collection</p>
         <h1 className="mt-4 font-heading text-5xl font-medium text-[#21343a] sm:text-6xl">Color-led care, built for brands.</h1>
-        <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-[#53676e]">A focused OEM/ODM portfolio for custom lip color and sunscreen, with format, testing and commercial requirements visible from the start.</p>
+        <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-[#53676e]">A focused OEM/ODM portfolio for lip color, sunscreen and face cleansing, with format, testing and commercial requirements visible from the start.</p>
         <div className="mx-auto mt-7 flex max-w-md items-center justify-center gap-3">
-          {[['#b42346', 'Lip makeup'], ['#146f9c', 'Sun care']].map(([color, label]) => <span key={label} className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[.14em] text-[#45585f]"><i className="h-3 w-3 rounded-full" style={{ background: color }} />{label}</span>)}
+          {[['#b42346', 'Lip makeup'], ['#146f9c', 'Sun care'], ['#237a6b', 'Face cleanser']].map(([color, label]) => <span key={label} className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[.14em] text-[#45585f]"><i className="h-3 w-3 rounded-full" style={{ background: color }} />{label}</span>)}
         </div>
       </div>
     </section>
@@ -56,7 +56,7 @@ export default function Products() {
         : <div className="py-24 text-center"><h2 className="font-heading text-2xl font-medium">Nothing matched that search</h2><p className="mt-2 text-[#607279]">Try another product, benefit or category.</p></div>}
       <section className="relative mt-20 overflow-hidden rounded-[2rem] bg-[#21343a] p-9 text-white sm:flex sm:items-center sm:justify-between">
         <div className="absolute inset-x-0 top-0 h-1 bg-[linear-gradient(90deg,#b42346,#e9aa25,#146f9c)]" />
-        <div><h2 className="font-heading text-3xl font-medium">Planning a lip makeup or sun-care launch?</h2><p className="mt-2 text-white/65">Share the market, quantity, target price and product direction. We will shape a development brief.</p></div>
+        <div><h2 className="font-heading text-3xl font-medium">Planning a beauty product launch?</h2><p className="mt-2 text-white/65">Share the market, quantity, target price and product direction. We will shape a development brief.</p></div>
         <a href="/contact" className="mt-5 inline-block rounded-full bg-white px-6 py-3 font-semibold text-[#21343a] sm:mt-0">Start an inquiry</a>
       </section>
     </main>

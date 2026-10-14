@@ -1,11 +1,12 @@
 # Aurelia Beauty OEM/ODM Platform
 
-Aurelia Beauty 是面向美妆品牌、零售商、分销商和电商团队的 B2B OEM/ODM 平台。首发聚焦唇妆与防晒，以产品方案展示、公开询盘、多产品 RFQ 和销售跟进为核心，不提供消费者购物车或在线支付。
+Aurelia Beauty 是面向美妆品牌、零售商、分销商和电商团队的 B2B OEM/ODM 平台。产品聚焦唇妆、防晒与面部清洁，以产品方案展示、公开询盘、多产品 RFQ 和销售跟进为核心，不提供消费者购物车或在线支付。
 
 ## 首发产品
 
 - 唇妆：Designer Lipstick、Traditional Lipsticks、Color Changing Lipsticks
 - 防晒：Sunscreen Spray、Sunscreen Gel、Sunscreen Cream & Lotion、Sunscreen Stick
+- 洁面：Gel/Cream、Foam、Oil、Micellar Face Cleanser
 
 产品参考来自 Global Cosmetics 的 Sunscreen SPF 与 Lipsticks 目录。正式商用前必须确认图片、商标和产品资料授权，并以最终配方、测试和目标市场审查结果为准。
 
@@ -22,7 +23,7 @@ Aurelia Beauty 是面向美妆品牌、零售商、分销商和电商团队的 B
 ## 主要页面
 
 - /：OEM/ODM 定位与转化入口
-- /products：7 个唇妆/防晒产品方案
+- /products：11 个唇妆、防晒与洁面产品方案
 - /services/lip-color-development：唇妆开发
 - /services/sun-care-development：防晒开发
 - /services/quality-and-care：开发、测试与质量流程

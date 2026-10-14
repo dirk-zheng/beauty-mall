@@ -12,6 +12,7 @@ const router = express.Router();
 const keywordRules = [
   { keywords: ['lipstick', 'lip color', 'shade', 'matte', 'satin', 'payoff', 'wear'], response: 'Lip Makeup Development\n\nShare your target consumer, finish, shade references, payoff, wear, packaging, price position and quantity. We can turn that into a sample brief.' },
   { keywords: ['sunscreen', 'spf', 'sun care', 'spray', 'gel', 'lotion', 'sun stick', 'uv'], response: 'Sun Care Development\n\nChoose spray, gel, cream, lotion or stick, then share the target market, texture, SPF direction, supporting claims, packaging and quantity.' },
+  { keywords: ['cleanser', 'face wash', 'micellar', 'cleansing oil', 'foam cleanser'], response: 'Face Cleanser Development\n\nChoose gel, cream, foam, oil or micellar, then share skin-feel, removal, packaging, market and quantity requirements.' },
   { keywords: ['moq', 'minimum order', 'sample', 'quantity', 'private label', 'opening order', 'trial order'], response: 'OEM/ODM Commercial Scope\n\nCurrent reference programs generally start around 10,000 units per order, with 5,000 per color or formulation type. Final MOQ follows the formula and packaging brief.' },
   { keywords: ['document', 'report', 'customs', 'clearance', 'stability test', 'compatibility test', 'ingredient list', 'compliance'], response: 'Testing & Documents\n\nIngredients, stability, compatibility, claim evidence, directions, cautions and available market documents are confirmed for the final formula and pack.' },
   { keywords: ['price', 'cost', 'how much', 'pricing', 'quote'], response: 'OEM/ODM Quotation\n\nPricing depends on formula, shade or SPF direction, component, decoration, packaging and volume. Share the brief for a qualified quotation.' },
@@ -20,7 +21,7 @@ const keywordRules = [
 ];
 // Default fallback replies
 const defaultReplies = [
-  'Tell us whether you are developing lip makeup or sun care, plus your market, quantity, target price and launch timing.',
+  'Tell us whether you are developing lip makeup, sun care or face cleanser, plus your market, quantity, target price and launch timing.',
   'Share your product brief and we will help define the next development step.',
   'Ask about formats, customization, samples, testing, MOQ or quotation.'
 ];

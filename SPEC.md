@@ -2,14 +2,15 @@
 
 ## 1. 产品目标
 
-建立面向美妆品牌、零售商、分销商和电商团队的 OEM/ODM 获客与销售协作平台。首发聚焦唇妆和防晒，以产品方案、询盘、RFQ、线索分配和跟进闭环为核心。
+建立面向美妆品牌、零售商、分销商和电商团队的 OEM/ODM 获客与销售协作平台。产品聚焦唇妆、防晒和面部清洁，以产品方案、询盘、RFQ、线索分配和跟进闭环为核心。
 
 ## 2. 首发范围
 
-合法分类仅包含 lip-care 与 sun-care，共 7 个产品方案：
+合法分类包含 lip-care、sun-care 与 face-cleanser，共 11 个产品方案：
 
 - 唇妆：Designer Lipstick、Traditional Lipsticks、Color Changing Lipsticks
 - 防晒：Sunscreen Spray、Sunscreen Gel、Sunscreen Cream & Lotion、Sunscreen Stick
+- 洁面：Gel/Cream、Foam、Oil、Micellar Face Cleanser
 
 公开页展示产品定位、规格、参考 MOQ、交期、质量检查点和询盘入口，不展示未经确认的零售价或实时库存。
 
@@ -36,7 +37,7 @@ New → Contacted → Qualified → Sampling → Quoted → Won / Lost
 ## 5. 验收标准
 
 - 前台只呈现 3 个唇妆和 4 个防晒方案；
-- 产品新增/编辑仅接受 lip-care 和 sun-care；
+- 产品新增/编辑接受 lip-care、sun-care 和 face-cleanser；
 - 公开询盘与登录 RFQ 都进入同一询盘池；
 - 管理员可以分配负责人，销售权限按负责人隔离；
 - 询盘可按阶段、负责人和关键词筛选；

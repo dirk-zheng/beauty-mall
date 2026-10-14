@@ -6,6 +6,7 @@ import { categories, categoryNames } from '../data/products';
 const categoryIcons = {
   'lip-care': Sparkles,
   'sun-care': Sparkles,
+  'face-cleanser': Sparkles,
 };
 
 const initialForm = {
