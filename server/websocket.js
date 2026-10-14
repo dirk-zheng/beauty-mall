@@ -156,28 +156,28 @@ function buildRfqAssortmentItems(visitorId) {
 // ─── Support (AI) ────────────────────────────────
 const keywordRules = [
   {
-    keywords: ['inci', 'solubility', 'use level', 'dosage', 'disperse', 'formulation', 'formula'],
-    response: 'Formulation Support 🧪\n\nShare the ingredient, dosage form, target function, process and pH range. We can help identify the relevant grade, starting use level and handling guidance.'
+    keywords: ['skin', 'routine', 'ritual', 'dry', 'oily', 'sensitive', 'hydrate'],
+    response: 'Skin Ritual Support ✨\n\nTell us how your skin feels and what finish you enjoy. We can help you layer essence, serum and moisturizer into a simple, flexible ritual.'
   },
   {
-    keywords: ['moq', 'minimum order', 'sample', 'quantity', 'pack size', 'trial order'],
-    response: 'Ingredient Samples & Supply 📦\n\nTell us the material, evaluation quantity, annual volume and destination. Sample availability, pack size, MOQ and lead time are confirmed by grade and lot.'
+    keywords: ['moq', 'minimum order', 'sample', 'quantity', 'private label', 'assortment', 'opening order', 'trial order'],
+    response: 'Flexible Beauty Partnerships 📦\n\nStart with hand sanitizer, spray, scented sanitizer, hand wash, cream, lipstick or sunscreen spray, gel, lotion or stick. MOQ, private-label options, claims and timing are confirmed by formula, testing and packaging.'
   },
   {
     keywords: ['document', 'report', 'customs', 'clearance', 'stability test', 'compatibility test', 'ingredient list', 'compliance'],
-    response: 'Raw-Material Documents 📄\n\nAvailable files may include TDS, SDS, INCI, representative COA and supporting quality or regulatory statements. Requirements are confirmed by material and market.'
+    response: 'Product & Order Documents 📄\n\nIngredients, directions, cautions, packaging specifications and available test documents are confirmed by formula and market.'
   },
   {
     keywords: ['price', 'cost', 'how much', 'cheap', 'discount', 'promotion', 'pricing', 'quote'],
-    response: 'Ingredient Quotation 💰\n\nShare the material or INCI, grade, target market, estimated volume and destination. Pricing follows the confirmed specification, pack size and quantity.'
+    response: 'Beauty Partnership Quotation 💰\n\nPricing depends on formula, shade, component, decoration, packaging and volume. Send the products and quantities you need.'
   },
   {
     keywords: ['shipping', 'delivery', 'logistics', 'transport', 'how long', 'freight', 'tracking'],
     response: 'Order & Export Support 🚢\n\nShipment planning, carton marks, packing lists, commercial invoices and standard export coordination follow the confirmed order and Incoterms. The buyer’s importer-of-record, customs, duties and U.S. compliance responsibilities are agreed before shipment.'
   },
   {
-    keywords: ['quality', 'damage', 'contamination', 'off-spec', 'inspect', 'inspection', 'qc', 'assay', 'microbiology', 'coa', 'traceability'],
-    response: 'Ingredient Quality Support 🛡️\n\nQualification can cover specification, identity or assay, microbiological limits, representative sample, COA, traceability and change notification.'
+    keywords: ['return', 'refund', 'warranty', 'quality', 'damage', 'defect', 'exchange', 'inspect', 'inspection', 'qc', 'fill weight', 'shade', 'packaging'],
+    response: 'Beauty Quality Support 🛡️\n\nQuality review can cover formula stability, shade, fill weight, packaging compatibility, labels, batch coding and packing.'
   },
   {
     keywords: ['payment', 'pay', 'method', 'wire', 'bank', 'credit', 'terms', 'TT', 'LC'],
@@ -186,9 +186,9 @@ const keywordRules = [
 ];
 
 const defaultReplies = [
-  'Thank you for contacting Aurelia Beauty. Ask about INCI, use levels, samples, documentation, MOQ or pricing.',
-  'Hello! Share your formulation brief, target market, required documents and expected volume.',
-  'Welcome to Aurelia Beauty. How can we support your raw-material evaluation?'
+  'Thank you for contacting Aurelia Pretty. Ask about products, samples, pricing, rituals or private label.',
+  'Hello! Share your beauty goals, audience, target price and desired launch window.',
+  'Welcome to Aurelia Pretty. How can we help with your ritual or partnership?'
 ];
 
 //根据用户消息关键词生成客服回复
@@ -211,7 +211,7 @@ function validateProduct(body) {
   const errors = [];
   if (!body.name || body.name.length < 2 || body.name.length > 100)
     errors.push('Product name must be 2-100 characters');
-  if (!body.category || !['active-ingredients', 'botanical-extracts', 'functional-materials'].includes(body.category))
+  if (!body.category || !['protective-products', 'lip-care', 'sun-care'].includes(body.category))
     errors.push('Please select a valid product category');
   if (!body.image)
     errors.push('Please provide a product image URL');
@@ -432,12 +432,6 @@ function handleProductCreate(payload, ws) {
     description: payload.description.trim(),
     moq: String(payload.moq || '').trim(),
     leadTime: String(payload.leadTime || '').trim(),
-    inci: String(payload.inci || '').trim(),
-    recommendedUse: String(payload.recommendedUse || '').trim(),
-    solubility: String(payload.solubility || '').trim(),
-    sizes: String(payload.sizes || '').trim(),
-    benefit: String(payload.benefit || '').trim(),
-    badge: String(payload.badge || '').trim(),
     applications: String(payload.applications || '').trim(),
     specs: Array.isArray(payload.specs) ? payload.specs.map(String).filter(Boolean) : [],
     qc: Array.isArray(payload.qc) ? payload.qc.map(String).filter(Boolean) : []
@@ -469,12 +463,6 @@ function handleProductUpdate(payload, ws) {
     description: payload.description.trim(),
     moq: String(payload.moq || '').trim(),
     leadTime: String(payload.leadTime || '').trim(),
-    inci: String(payload.inci || '').trim(),
-    recommendedUse: String(payload.recommendedUse || '').trim(),
-    solubility: String(payload.solubility || '').trim(),
-    sizes: String(payload.sizes || '').trim(),
-    benefit: String(payload.benefit || '').trim(),
-    badge: String(payload.badge || '').trim(),
     applications: String(payload.applications || '').trim(),
     specs: Array.isArray(payload.specs) ? payload.specs.map(String).filter(Boolean) : products[idx].specs,
     qc: Array.isArray(payload.qc) ? payload.qc.map(String).filter(Boolean) : products[idx].qc
@@ -582,12 +570,12 @@ async function handleQuoteSubmit(payload, ws) {
   } = payload || {};
 
   if (!market?.trim()) throw new Error('Target market is required');
-  if (!targetCustomerProfile?.trim()) throw new Error('Company type, application and target market are required');
-  if (!specifications?.trim()) throw new Error('Ingredient, function, use level and document requirements are required');
+  if (!targetCustomerProfile?.trim()) throw new Error('Target customer and channel details are required');
+  if (!specifications?.trim()) throw new Error('Formula, shade and packaging details are required');
   const quantity = Number(estimatedQuantity);
   if (!Number.isInteger(quantity) || quantity < 1) throw new Error('Estimated quantity must be a positive integer');
   const { items } = buildRfqAssortmentItems(ws.visitorId);
-  if (items.length === 0) throw new Error('Add at least one cosmetic ingredient to the RFQ list');
+  if (items.length === 0) throw new Error('Add at least one product program to the RFQ assortment');
 
   const now = new Date();
   const datePart = now.toISOString().slice(0, 10).replace(/-/g, '');
@@ -629,7 +617,7 @@ async function handleQuoteSubmit(payload, ws) {
     reference,
     status: quote.status,
     createdAt: quote.createdAt,
-    message: 'Ingredient RFQ received. Our team will review the materials, technical requirements, quantity, documents and delivery destination.'
+    message: 'Quote request received. Our team will review the products, shades, packaging, quantity and delivery requirements.'
   };
 }
 
@@ -813,7 +801,7 @@ async function handleSupportMessageSend(payload, ws) {
 
     if (ws.user.role === 'guest' && customerMessageCount + 1 === 7) {
       createdMessages.push(appendMessage({
-        senderType: 'system', senderName: 'Aurelia Beauty Support',
+        senderType: 'system', senderName: 'Aurelia Pretty Support',
         content: 'You have 3 guest messages remaining. Please register to continue chatting after the guest limit.',
       }));
     }
@@ -829,7 +817,7 @@ async function handleSupportMessageSend(payload, ws) {
         conversation.botEnabled = false;
         conversation.priority = 'high';
         createdMessages.push(appendMessage({
-          senderType: 'system', senderName: 'Aurelia Beauty Support',
+          senderType: 'system', senderName: 'Aurelia Pretty Support',
           content: 'Your request has been added to our sales queue. A team member will join this conversation shortly.',
         }));
         larkNotification = {
@@ -903,7 +891,7 @@ async function handleSupportHandoffRequest(payload, ws) {
     conversation.resolvedAt = null;
     requested = true;
     createdMessages.push(appendMessage({
-      senderType: 'system', senderName: 'Aurelia Beauty Support',
+      senderType: 'system', senderName: 'Aurelia Pretty Support',
       content: 'A sales representative has been requested. Please keep this window open; your conversation history will be shared with the team.',
     }));
   });
@@ -950,7 +938,7 @@ async function handleSupportClaim(payload, ws) {
     conversation.claimedByAccount = ws.user.account;
     conversation.resolvedAt = null;
     createdMessages.push(appendMessage({
-      senderType: 'system', senderName: 'Aurelia Beauty Support',
+      senderType: 'system', senderName: 'Aurelia Pretty Support',
       content: `${conversation.assignedName} has joined the conversation as your ${ws.user.role === 'admin' ? 'support administrator' : 'sales representative'}.`,
     }));
   });
@@ -971,7 +959,7 @@ async function handleSupportTransfer(payload, ws) {
     conversation.assignedName = target.name || target.account;
     conversation.claimedByAccount = ws.user.account;
     createdMessages.push(appendMessage({
-      senderType: 'system', senderName: 'Aurelia Beauty Support',
+      senderType: 'system', senderName: 'Aurelia Pretty Support',
       content: `This conversation has been transferred to ${conversation.assignedName}.`,
     }));
   });
@@ -989,7 +977,7 @@ async function handleSupportResolve(payload, ws) {
     conversation.botEnabled = false;
     conversation.resolvedAt = new Date().toISOString();
     createdMessages.push(appendMessage({
-      senderType: 'system', senderName: 'Aurelia Beauty Support',
+      senderType: 'system', senderName: 'Aurelia Pretty Support',
       content: 'This conversation has been marked as resolved. Send another message whenever you need further assistance.',
     }));
   });
@@ -1006,12 +994,12 @@ function handleSupportStaffList(payload, ws) {
 //返回WebSocket客服常见问题列表
 function handleSupportFAQ() {
   return [
-    { id: 1, question: 'What are the MOQ and commercial pack sizes?', category: 'MOQ' },
-    { id: 2, question: 'How do evaluation samples and pricing work?', category: 'Commercial' },
-    { id: 3, question: 'Which grades and formats can be sampled?', category: 'Materials' },
-    { id: 4, question: 'Which technical documents are available?', category: 'Documentation' },
-    { id: 5, question: 'What is the typical supply lead time?', category: 'Supply' },
-    { id: 6, question: 'What does raw-material qualification include?', category: 'Quality' }
+    { id: 1, question: 'What is the typical opening MOQ?', category: 'MOQ' },
+    { id: 2, question: 'How do samples and pricing work?', category: 'Commercial' },
+    { id: 3, question: 'Which formulas and shades can be sampled?', category: 'Products' },
+    { id: 4, question: 'Which private-label elements can be customized?', category: 'Private Label' },
+    { id: 5, question: 'What is the typical production lead time?', category: 'Production' },
+    { id: 6, question: 'What can pre-shipment QC include?', category: 'Quality' }
   ];
 }
 

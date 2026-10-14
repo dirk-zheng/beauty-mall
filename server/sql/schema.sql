@@ -1,11 +1,11 @@
--- Aurelia Beauty B2B user-data schema
+-- Aurelia Pretty B2B user-data schema
 -- Products, FAQs and editorial articles intentionally remain JSON-backed.
 
-CREATE DATABASE IF NOT EXISTS `aurelia_beauty_b2b`
+CREATE DATABASE IF NOT EXISTS `aurelia_pretty_b2b`
   CHARACTER SET utf8mb4
   COLLATE utf8mb4_0900_ai_ci;
 
-USE `aurelia_beauty_b2b`;
+USE `aurelia_pretty_b2b`;
 
 CREATE TABLE IF NOT EXISTS `users` (
   `visitor_id` VARCHAR(80) NOT NULL,

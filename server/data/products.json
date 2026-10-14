@@ -1,10 +1,393 @@
 [
-  {"id":"aure-cera-3","name":"AURE-CERA 3 Ceramide Complex","category":"active-ingredients","image":"/ingredients/ceramide-complex-main.png","gallery":["/ingredients/ceramide-complex-main.png","/ingredients/ceramide-complex-detail.png","/ingredients/hero-ingredients.png"],"description":"A biomimetic lipid complex designed to support barrier-focused emulsions with ceramide NP, cholesterol and complementary fatty components in a formulator-friendly concentrate.","inci":"Ceramide NP (and) Cholesterol (and) Hydrogenated Lecithin","recommendedUse":"1–5%","solubility":"Oil phase / dispersible","specs":["Appearance: ivory waxy concentrate","Ceramide NP standardized by batch","Suggested processing below 75°C","COA, TDS and SDS available","For professional cosmetic formulation"],"applications":"Barrier creams, facial emulsions, body lotions, masks and post-treatment care concepts. Confirm compatibility and final use level in the finished formulation.","sizes":"1 kg · 5 kg · 20 kg","benefit":"Barrier lipid replenishment","badge":"Barrier active","moq":"5 kg","leadTime":"7–14 days for stocked lots","price":0,"stock":0},
-  {"id":"aure-ha-multi","name":"AURE-HA Multi-Molecular Hyaluronate","category":"active-ingredients","image":"/ingredients/hyaluronate-main.png","gallery":["/ingredients/hyaluronate-main.png","/ingredients/hyaluronate-detail.png","/ingredients/hero-ingredients.png"],"description":"A balanced sodium hyaluronate blend combining complementary molecular-weight fractions for immediate slip, film formation and layered hydration concepts.","inci":"Sodium Hyaluronate","recommendedUse":"0.05–0.5%","solubility":"Water soluble","specs":["Appearance: white to off-white powder","Multi-fraction molecular-weight profile","Low-odor cosmetic grade","Add slowly with controlled hydration","COA, TDS and SDS available"],"applications":"Serums, essences, gels, masks, creams and leave-on hair or scalp products. Pre-disperse as needed and validate viscosity in the final system.","sizes":"500 g · 1 kg · 5 kg","benefit":"Multi-level hydration","badge":"Hydration active","moq":"1 kg","leadTime":"7–14 days for stocked lots","price":0,"stock":0},
-  {"id":"aure-nia-99","name":"AURE-NIA 99 Niacinamide","category":"active-ingredients","image":"/ingredients/niacinamide-main.png","gallery":["/ingredients/niacinamide-main.png","/ingredients/niacinamide-detail.png","/ingredients/hero-ingredients.png"],"description":"High-purity cosmetic niacinamide for tone-evening, barrier-support and sebum-care formulations requiring reliable dissolution and tight quality control.","inci":"Niacinamide","recommendedUse":"2–5%","solubility":"Water soluble","specs":["Assay: ≥99.0%","Appearance: white crystalline powder","Controlled residual nicotinic acid","Recommended formula pH 5.0–7.0","COA, TDS and SDS available"],"applications":"Brightening serums, moisturizers, body care, scalp treatments and oil-control products. Verify pH, stability and local claim requirements in the final formula.","sizes":"1 kg · 5 kg · 25 kg","benefit":"Tone + barrier support","badge":"High purity","moq":"5 kg","leadTime":"7–14 days for stocked lots","price":0,"stock":0},
-  {"id":"aure-cica-extract","name":"AURE-CICA Centella Extract","category":"botanical-extracts","image":"/ingredients/centella-main.png","gallery":["/ingredients/centella-main.png","/ingredients/centella-detail.png","/ingredients/hero-ingredients.png"],"description":"A water-based Centella asiatica extract standardized for a consistent botanical profile and designed for calming, recovery and sensitive-skin concepts.","inci":"Water (and) Glycerin (and) Centella Asiatica Extract","recommendedUse":"1–5%","solubility":"Water soluble","specs":["Appearance: pale green to amber liquid","Standardized botanical solids","Preserved cosmetic-grade format","Cold-process compatible","COA, TDS and SDS available"],"applications":"Toners, essences, soothing gels, emulsions, masks, scalp care and after-sun concepts. Add during cool-down and confirm preservation compatibility.","sizes":"5 kg · 20 kg · 200 kg","benefit":"Calm + recovery concepts","badge":"Botanical active","moq":"20 kg","leadTime":"10–18 days after confirmation","price":0,"stock":0},
-  {"id":"aure-bisa-natural","name":"AURE-BISA Natural Bisabolol","category":"botanical-extracts","image":"/ingredients/bisabolol-main.png","gallery":["/ingredients/bisabolol-main.png","/ingredients/bisabolol-detail.png","/ingredients/hero-ingredients.png"],"description":"Naturally sourced alpha-bisabolol with a clear, low-odor profile for comfort-led skin, scalp and color-cosmetic formulations.","inci":"Bisabolol","recommendedUse":"0.1–1.0%","solubility":"Oil soluble","specs":["Natural-origin alpha-bisabolol","Appearance: clear colorless to pale-yellow liquid","High active content","Low odor and easy oil-phase incorporation","COA, TDS and SDS available"],"applications":"Sensitive-skin emulsions, balms, lip care, scalp treatments, after-shave, baby-care concepts and color cosmetics. Validate final claims and irritation profile.","sizes":"1 kg · 5 kg · 25 kg","benefit":"Comfort + soothing support","badge":"Natural origin","moq":"5 kg","leadTime":"10–18 days after confirmation","price":0,"stock":0},
-  {"id":"aure-sq-sugarcane","name":"AURE-SQ Sugarcane Squalane","category":"functional-materials","image":"/ingredients/squalane-main.png","gallery":["/ingredients/squalane-main.png","/ingredients/squalane-detail.png","/ingredients/hero-ingredients.png"],"description":"A lightweight, highly stable sugarcane-derived emollient that improves slip, spreadability and after-feel without a heavy or greasy finish.","inci":"Squalane","recommendedUse":"1–20%","solubility":"Oil soluble","specs":["Renewable sugarcane feedstock","Appearance: clear colorless liquid","High oxidative stability","Low odor and broad formulation compatibility","COA, TDS and SDS available"],"applications":"Facial oils, emulsions, cleansers, lip products, foundations, hair serums and body care. Add to the oil phase or post-add where process permits.","sizes":"5 kg · 20 kg · 175 kg","benefit":"Silky lightweight emollience","badge":"Renewable emollient","moq":"20 kg","leadTime":"10–18 days after confirmation","price":0,"stock":0},
-  {"id":"aure-emul-ow","name":"AURE-EMUL O/W Emulsifier","category":"functional-materials","image":"/ingredients/emulsifier-main.png","gallery":["/ingredients/emulsifier-main.png","/ingredients/emulsifier-detail.png","/ingredients/hero-ingredients.png"],"description":"A plant-derived nonionic oil-in-water emulsifier engineered for elegant creams and lotions with stable structure and a soft, conditioned skin feel.","inci":"Cetearyl Alcohol (and) Cetearyl Glucoside","recommendedUse":"2–8%","solubility":"Oil phase / heat processed","specs":["Appearance: ivory waxy flakes","Nonionic O/W emulsification system","Supports a broad oil-phase range","Typical processing at 70–75°C","COA, TDS and SDS available"],"applications":"Face creams, body lotions, hair conditioners, masks and low-to-medium viscosity emulsions. Run stability, freeze-thaw and packaging-compatibility tests.","sizes":"5 kg · 20 kg · 25 kg","benefit":"Stable elegant emulsions","badge":"Formulation base","moq":"20 kg","leadTime":"7–14 days for stocked lots","price":0,"stock":0},
-  {"id":"aure-soft-silica","name":"AURE-SOFT Silica Microspheres","category":"functional-materials","image":"/ingredients/silica-main.png","gallery":["/ingredients/silica-main.png","/ingredients/silica-detail.png","/ingredients/hero-ingredients.png"],"description":"Porous cosmetic-grade silica microspheres that provide soft-focus optics, improved slip and controlled oil absorption in powder and emulsion systems.","inci":"Silica","recommendedUse":"1–10%","solubility":"Insoluble / dispersible","specs":["Appearance: free-flowing white powder","Spherical porous morphology","Soft-focus and sensory modifier","Suitable for anhydrous and emulsion systems","COA, TDS and SDS available"],"applications":"Pressed and loose powders, primers, foundations, sunscreen textures, dry shampoo and mattifying skincare. Control airborne dust during handling and validate dispersion.","sizes":"1 kg · 5 kg · 15 kg","benefit":"Soft focus + oil control","badge":"Texture modifier","moq":"5 kg","leadTime":"10–18 days after confirmation","price":0,"stock":0}
+  {
+    "id": "designer-lipstick-008",
+    "name": "Designer Lipstick",
+    "category": "lip-care",
+    "image": "/product-images/designer-lipstick.jpg",
+    "gallery": [
+      "/product-images/designer-lipstick.jpg"
+    ],
+    "description": "A statement OEM/ODM lipstick program pairing customizable formulas with premium packaging directions such as marble-inspired finishes, decorative effects and bespoke components.",
+    "specs": [
+      "Custom lipstick formula, shade and finish development",
+      "Statement packaging concepts for premium positioning",
+      "Marble-inspired, decorative and bespoke component directions",
+      "Source catalog lists production capacity of up to 32,000 units daily",
+      "Final formula, component construction and decoration require project approval"
+    ],
+    "applications": "Apply directly to the lips as directed on the approved finished-product label. Final ingredients, directions, cautions and claims must follow the confirmed formula and destination-market requirements.",
+    "sizes": "Custom bullet / component / decorative formats",
+    "benefit": "Premium formula + statement packaging",
+    "badge": "Designer lipstick",
+    "moq": "10,000 units / order; 5,000 / color",
+    "leadTime": "Confirm after formula, shade and packaging approval",
+    "price": 0,
+    "stock": 0,
+    "sourceUrl": "https://www.global-cosmetics.com/cosmetic-manufacture-products/oem-odm-lip-care/lipsticks/",
+    "imageSource": "Local project crop of the Designer Lipstick image in the linked source page's Types & Styles section",
+    "qc": [
+      "Formula stability, payoff and sensory performance reviewed",
+      "Shade, fill weight, component fit and decoration checked",
+      "Ingredients, claims and destination-market labels approved before production"
+    ],
+    "imageFit": "contain"
+  },
+  {
+    "id": "traditional-lipsticks-009",
+    "name": "Traditional Lipsticks",
+    "category": "lip-care",
+    "image": "/product-images/traditional-lipsticks.jpg",
+    "gallery": [
+      "/product-images/traditional-lipsticks.jpg"
+    ],
+    "description": "A versatile OEM/ODM lipstick program spanning classic sheer, cream, satin and matte finishes for brands building an adaptable everyday color assortment.",
+    "specs": [
+      "Sheer, cream, satin and matte finish directions",
+      "Custom shades, sensorial profiles and wear targets",
+      "Classic bullet and brand-specific packaging options",
+      "Source catalog lists production capacity of up to 32,000 units daily",
+      "Final performance and claims require formula-specific testing"
+    ],
+    "applications": "Apply directly to the lips as directed on the approved finished-product label. Final ingredients, wear claims, cautions and directions must follow the confirmed formula and destination-market requirements.",
+    "sizes": "Custom bullet / classic lipstick formats",
+    "benefit": "Sheer to matte finish range",
+    "badge": "Classic lipstick",
+    "moq": "10,000 units / order; 5,000 / color",
+    "leadTime": "Confirm after formula, shade and packaging approval",
+    "price": 0,
+    "stock": 0,
+    "sourceUrl": "https://www.global-cosmetics.com/cosmetic-manufacture-products/oem-odm-lip-care/lipsticks/",
+    "imageSource": "Local project crop of the Traditional Lipsticks image in the linked source page's Types & Styles section",
+    "qc": [
+      "Shade, texture, payoff and wear targets reviewed",
+      "Bullet integrity, fill weight and packaging compatibility checked",
+      "Ingredients, claims and destination-market labels approved before production"
+    ],
+    "imageFit": "contain"
+  },
+  {
+    "id": "color-changing-lipsticks-010",
+    "name": "Color Changing Lipsticks",
+    "category": "lip-care",
+    "image": "/product-images/color-changing-lipsticks.jpg",
+    "gallery": [
+      "/product-images/color-changing-lipsticks.jpg"
+    ],
+    "description": "A reactive OEM/ODM lipstick concept designed to develop a personalized-looking tone in response to the wearer's lip environment, combining novelty with customizable formula and packaging choices.",
+    "specs": [
+      "Reactive color-development concept",
+      "Custom shade direction, finish and packaging",
+      "Designed for differentiated lip-color launches",
+      "Source catalog lists production capacity of up to 32,000 units daily",
+      "Color response, stability, ingredients and claims require final-formula testing"
+    ],
+    "applications": "Apply directly to clean lips and allow the color to develop. Exact shade response, directions, ingredients, cautions and claims must be confirmed on the approved finished-product label.",
+    "sizes": "Custom bullet / reactive lipstick formats",
+    "benefit": "Personalized-looking color response",
+    "badge": "Reactive color",
+    "moq": "10,000 units / order; 5,000 / color",
+    "leadTime": "Confirm after formula, shade and packaging approval",
+    "price": 0,
+    "stock": 0,
+    "sourceUrl": "https://www.global-cosmetics.com/cosmetic-manufacture-products/oem-odm-lip-care/lipsticks/",
+    "imageSource": "Local project crop of the Color Changing Lipsticks image in the linked source page's Types & Styles section",
+    "qc": [
+      "Color-development behavior and shade range tested on the final formula",
+      "Stability, bullet integrity and packaging compatibility checked",
+      "Ingredients, claims and destination-market labels approved before production"
+    ],
+    "imageFit": "contain"
+  },
+  {
+    "id": "sunscreen-spray-011",
+    "name": "Sunscreen Spray",
+    "category": "sun-care",
+    "image": "/product-images/sunscreen-spray.jpg",
+    "gallery": [
+      "/product-images/sunscreen-spray.jpg"
+    ],
+    "imageFit": "contain",
+    "description": "A lightweight OEM/ODM sunscreen spray program designed for convenient, on-the-go application, even coverage, quick absorption and a non-greasy skin feel.",
+    "specs": [
+      "Fine-mist or continuous-spray format development",
+      "Lightweight feel and even-coverage targets",
+      "Bottle, actuator, formula and decoration can be customized",
+      "Source catalog lists production capacity of up to 50,000 units daily",
+      "SPF, broad-spectrum, water-resistance and spray-safety claims require final-product testing"
+    ],
+    "applications": "Apply generously and evenly before sun exposure, avoiding inhalation and following the approved spray directions. Reapplication timing, SPF claim and cautions must be confirmed for the final formula and market.",
+    "sizes": "Custom spray / mist formats",
+    "benefit": "Quick, even on-the-go application",
+    "badge": "Sunscreen spray",
+    "moq": "10,000 units / order; 5,000 / formulation type",
+    "leadTime": "Confirm after formula, SPF testing and packaging approval",
+    "price": 0,
+    "stock": 0,
+    "sourceUrl": "https://www.global-cosmetics.com/cosmetic-manufacture-products/oem-odm-skin-care/sunscreen-spf/",
+    "imageSource": "Local project crop of the Sunscreen Spray image in the linked source page's Types & Styles section",
+    "qc": [
+      "Spray pattern, dose consistency and actuator performance checked",
+      "SPF and broad-spectrum performance tested on the final formula",
+      "Stability, packaging compatibility and destination-market labels approved"
+    ]
+  },
+  {
+    "id": "sunscreen-gel-012",
+    "name": "Sunscreen Gel",
+    "category": "sun-care",
+    "image": "/product-images/sunscreen-gel.jpg",
+    "gallery": [
+      "/product-images/sunscreen-gel.jpg"
+    ],
+    "imageFit": "contain",
+    "description": "A water-based OEM/ODM sunscreen gel concept combining a fresh, lightweight texture with hydration support, quick absorption and customizable UV-protection development.",
+    "specs": [
+      "Water-based gel texture direction",
+      "Lightweight, refreshing and low-residue sensory targets",
+      "Hydration support can be developed to brief",
+      "Source catalog lists production capacity of up to 50,000 units daily",
+      "SPF and broad-spectrum claims require finished-formula testing and regulatory review"
+    ],
+    "applications": "Apply generously and evenly before sun exposure, then reapply according to the approved finished-product label. Exact amount, timing, claims and cautions require formula-specific testing.",
+    "sizes": "Custom pump / bottle / tube gel formats",
+    "benefit": "Fresh hydration + UV protection",
+    "badge": "Sunscreen gel",
+    "moq": "10,000 units / order; 5,000 / formulation type",
+    "leadTime": "Confirm after formula, SPF testing and packaging approval",
+    "price": 0,
+    "stock": 0,
+    "sourceUrl": "https://www.global-cosmetics.com/cosmetic-manufacture-products/oem-odm-skin-care/sunscreen-spf/",
+    "imageSource": "Local project crop of the Sunscreen Gel image in the linked source page's Types & Styles section",
+    "qc": [
+      "Gel stability, absorption and skin-feel reviewed",
+      "SPF and broad-spectrum performance tested on the final formula",
+      "Packaging compatibility, fill weight and destination-market labels approved"
+    ]
+  },
+  {
+    "id": "sunscreen-cream-lotion-013",
+    "name": "Sunscreen Cream & Lotion",
+    "category": "sun-care",
+    "image": "/product-images/sunscreen-cream-lotion.jpg",
+    "gallery": [
+      "/product-images/sunscreen-cream-lotion.jpg"
+    ],
+    "imageFit": "contain",
+    "description": "A customizable OEM/ODM sunscreen cream and lotion program focused on smooth spreadability, comfortable daily wear and skincare benefits tailored to the intended market.",
+    "specs": [
+      "Cream and lotion texture directions",
+      "Custom slip, absorption, finish and hydration profile",
+      "Tube, pump and bottle packaging options",
+      "Source catalog lists production capacity of up to 50,000 units daily",
+      "UV-filter system, SPF and broad-spectrum claims require final-formula testing"
+    ],
+    "applications": "Apply generously and evenly before sun exposure, then reapply according to the approved finished-product label. Exact amount, timing, SPF claim and cautions require formula-specific testing and market review.",
+    "sizes": "Custom tube / pump / bottle formats",
+    "benefit": "Smooth daily sun-care textures",
+    "badge": "Cream & lotion",
+    "moq": "10,000 units / order; 5,000 / formulation type",
+    "leadTime": "Confirm after formula, SPF testing and packaging approval",
+    "price": 0,
+    "stock": 0,
+    "sourceUrl": "https://www.global-cosmetics.com/cosmetic-manufacture-products/oem-odm-skin-care/sunscreen-spf/",
+    "imageSource": "Local project crop of the Sunscreen Cream & Lotion image in the linked source page's Types & Styles section",
+    "qc": [
+      "Texture, spreadability and finished-product stability reviewed",
+      "SPF and broad-spectrum performance tested on the final formula",
+      "Packaging compatibility, fill weight and destination-market labels approved"
+    ]
+  },
+  {
+    "id": "sunscreen-stick-014",
+    "name": "Sunscreen Stick",
+    "category": "sun-care",
+    "image": "/product-images/sunscreen-stick.jpg",
+    "gallery": [
+      "/product-images/sunscreen-stick.jpg"
+    ],
+    "imageFit": "contain",
+    "description": "A compact OEM/ODM sunscreen stick program for targeted, mess-free application on areas such as the face, lips, ears and nose, with a smooth glide and travel-ready format.",
+    "specs": [
+      "Solid, targeted sunscreen format",
+      "Smooth-glide and non-greasy sensory targets",
+      "Face, lip and exposed-area positioning can be developed to brief",
+      "Source catalog lists production capacity of up to 50,000 units daily",
+      "SPF, broad-spectrum and water-resistance claims require final-product testing"
+    ],
+    "applications": "Glide generously and evenly over exposed areas before sun exposure and reapply according to the approved label. Coverage amount, permitted use areas, SPF claim and cautions require final-formula review.",
+    "sizes": "Custom twist-up / compact stick formats",
+    "benefit": "Targeted, travel-ready protection",
+    "badge": "Sunscreen stick",
+    "moq": "10,000 units / order; 5,000 / formulation type",
+    "leadTime": "Confirm after formula, SPF testing and packaging approval",
+    "price": 0,
+    "stock": 0,
+    "sourceUrl": "https://www.global-cosmetics.com/cosmetic-manufacture-products/oem-odm-skin-care/sunscreen-spf/",
+    "imageSource": "Local project crop of the Sunscreen Stick image in the linked source page's Types & Styles section",
+    "qc": [
+      "Stick integrity, glide, payoff and heat stability reviewed",
+      "SPF and broad-spectrum performance tested on the final formula",
+      "Component compatibility, fill weight and destination-market labels approved"
+    ]
+  },
+  {
+    "id": "hand-sanitizer-001",
+    "name": "Hand Sanitizer",
+    "category": "protective-products",
+    "image": "/product-images/hand-sanitizer.jpg",
+    "gallery": [
+      "/product-images/hand-sanitizer.jpg"
+    ],
+    "description": "A rinse-free hand sanitizer gel developed for OEM and private-label programs, combining an alcohol-based hygiene format with aloe vera and skin-conditioning support for frequent use.",
+    "specs": [
+      "Alcohol-based rinse-free gel format",
+      "Aloe vera and moisturizing support",
+      "Fragrance, viscosity and packaging can be customized",
+      "Retail, travel and bulk packaging options",
+      "Final claims and labeling subject to formula and market review"
+    ],
+    "applications": "Apply enough product to cover dry hands, then rub thoroughly until dry. Final directions and cautions must follow the approved formula and destination-market rules.",
+    "sizes": "50 ml / 100 ml / 250 ml / 500 ml / 1 L",
+    "benefit": "Rinse-free hand hygiene",
+    "badge": "Protective care",
+    "moq": "10,000 units / order",
+    "leadTime": "Confirm after formula and packaging approval",
+    "price": 0,
+    "stock": 0,
+    "sourceUrl": "https://www.global-cosmetics.com/cosmetic-manufacture-products/protective-products/hand-sanitizer/",
+    "imageSource": "Local project copy from the linked Global Cosmetics source page",
+    "qc": [
+      "Alcohol level and finished-product claims verified against the approved specification",
+      "Packaging compatibility, fill weight and closure performance checked",
+      "Directions, cautions and market-specific labels approved before production"
+    ]
+  },
+  {
+    "id": "sanitizer-alcohol-spray-002",
+    "name": "Sanitizer Alcohol Spray",
+    "category": "protective-products",
+    "image": "/product-images/sanitizer-alcohol-spray.jpg",
+    "gallery": [
+      "/product-images/sanitizer-alcohol-spray.jpg"
+    ],
+    "description": "A portable, rinse-free alcohol spray for hand-hygiene programs, designed for quick application and adaptable to retail, travel and workplace packaging.",
+    "specs": [
+      "Fine-mist rinse-free spray format",
+      "Source catalog identifies an ethanol-based formula",
+      "Bottle, actuator, fragrance and label can be customized",
+      "Multiple retail and bulk sizes available",
+      "Alcohol level and claims require final specification approval"
+    ],
+    "applications": "Spray evenly onto dry hands and rub over all surfaces until dry. Use only in accordance with the approved label, cautions and local requirements.",
+    "sizes": "50 ml / 100 ml / 250 ml / 500 ml / 1 L",
+    "benefit": "Portable hygiene spray",
+    "badge": "Travel format",
+    "moq": "10,000 units / order",
+    "leadTime": "Confirm after formula and packaging approval",
+    "price": 0,
+    "stock": 0,
+    "sourceUrl": "https://www.global-cosmetics.com/cosmetic-manufacture-products/protective-products/sanitizer-alcohol-spray/",
+    "imageSource": "Local project copy from the linked Global Cosmetics source page",
+    "qc": [
+      "Spray pattern, leakage resistance and actuator performance checked",
+      "Alcohol level and label claims matched to the approved formula",
+      "Transport, packaging and destination-market requirements confirmed"
+    ]
+  },
+  {
+    "id": "scented-sanitizers-003",
+    "name": "Scented Sanitizers",
+    "category": "protective-products",
+    "image": "/product-images/scented-sanitizers.jpg",
+    "gallery": [
+      "/product-images/scented-sanitizers.jpg"
+    ],
+    "description": "A customizable collection of scented, rinse-free sanitizer gels that pairs everyday hand hygiene with a choice of fragrance profiles and portable packaging.",
+    "specs": [
+      "Rinse-free scented gel format",
+      "Custom fragrance profiles available",
+      "Travel, retail and bulk packaging options",
+      "Viscosity, color and decoration can be developed to brief",
+      "Fragrance safety and final claims subject to market review"
+    ],
+    "applications": "Dispense onto dry hands and rub thoroughly until dry. Fragrance, directions and cautions must be confirmed for the final formula and destination market.",
+    "sizes": "Travel / retail / bulk formats",
+    "benefit": "Hygiene with custom scent",
+    "badge": "Custom fragrance",
+    "moq": "Confirm by fragrance and format",
+    "leadTime": "Confirm after fragrance and packaging approval",
+    "price": 0,
+    "stock": 0,
+    "sourceUrl": "https://www.global-cosmetics.com/protective-products/",
+    "imageSource": "Local project copy from the linked Global Cosmetics source page",
+    "qc": [
+      "Fragrance compatibility and stability reviewed",
+      "Viscosity, fill weight and packaging performance checked",
+      "Allergen, ingredient and market labeling requirements confirmed"
+    ]
+  },
+  {
+    "id": "hand-wash-004",
+    "name": "Hand Wash",
+    "category": "protective-products",
+    "image": "/product-images/hand-wash.jpg",
+    "gallery": [
+      "/product-images/hand-wash.jpg"
+    ],
+    "description": "A liquid hand-wash concept for frequent cleansing, with aloe vera and conditioning support intended to balance effective washing with a comfortable after-feel.",
+    "specs": [
+      "Rinse-off liquid hand-wash format",
+      "Aloe vera and conditioning support",
+      "Fragrance, color, viscosity and packaging can be customized",
+      "Pump, refill and hospitality formats available",
+      "Any antibacterial claim requires formula-specific evidence"
+    ],
+    "applications": "Apply to wet hands, work into a lather across all surfaces, then rinse thoroughly. Final directions and claims must follow the approved formula.",
+    "sizes": "Retail / refill / hospitality formats",
+    "benefit": "Cleanse + condition",
+    "badge": "Frequent use",
+    "moq": "Confirm by formula and format",
+    "leadTime": "Confirm after formula and packaging approval",
+    "price": 0,
+    "stock": 0,
+    "sourceUrl": "https://www.global-cosmetics.com/protective-products/",
+    "imageSource": "Local project copy from the linked Global Cosmetics source page",
+    "qc": [
+      "Cleansing performance and skin-feel reviewed against the approved brief",
+      "Viscosity, pump output and packaging compatibility checked",
+      "Claims, directions and destination-market labels approved"
+    ]
+  },
+  {
+    "id": "antiseptic-cream-005",
+    "name": "Antiseptic Cream",
+    "category": "protective-products",
+    "image": "/product-images/antiseptic-cream.jpg",
+    "gallery": [
+      "/product-images/antiseptic-cream.jpg"
+    ],
+    "description": "A conditioning cream format for hand and body protective-care programs, designed around a comfortable texture and repeat-use positioning.",
+    "specs": [
+      "Hand and body cream format",
+      "Conditioning, low-residue texture can be tailored",
+      "Tube, pump and jar packaging options",
+      "Fragrance and sensorial profile can be customized",
+      "Antiseptic or antibacterial claims require market-specific substantiation"
+    ],
+    "applications": "Use only as directed on the approved finished-product label. Intended use, application area, frequency and cautions must be confirmed for the final formula.",
+    "sizes": "Tube / pump / jar formats",
+    "benefit": "Conditioning protective care",
+    "badge": "Cream format",
+    "moq": "Confirm by formula and format",
+    "leadTime": "Confirm after formula, testing and packaging approval",
+    "price": 0,
+    "stock": 0,
+    "sourceUrl": "https://www.global-cosmetics.com/protective-products/",
+    "imageSource": "Local project copy from the linked Global Cosmetics source page",
+    "qc": [
+      "Formula stability and packaging compatibility assessed",
+      "Texture, residue and fill-weight specifications checked",
+      "Regulated claims and label content approved for the destination market"
+    ]
+  }
 ]

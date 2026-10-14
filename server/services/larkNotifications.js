@@ -109,28 +109,28 @@ function notifyQuoteInquiry(quote) {
     : '';
 
   return sendLarkCard(buildCard({
-    title: `New cosmetic ingredient inquiry · ${quote.reference}`,
+    title: `New wholesale inquiry · ${quote.reference}`,
     template: 'orange',
     fields: {
       Reference: quote.reference,
-      Source: quote.source || 'Member ingredient RFQ list',
+      Source: quote.source || 'Member RFQ assortment',
       Name: customer.name,
       Company: customer.company,
       Country: customer.country,
       Email: customer.email || customer.account || customer.account,
       'Phone / WhatsApp': customer.whatsapp,
       'Business type': quote.buyerProfile?.businessType,
-      'Target markets': quote.buyerProfile?.salesChannels,
-      'Estimated quantity (kg)': quote.estimatedQuantity,
+      'Sales channels': quote.buyerProfile?.salesChannels,
+      Quantity: quote.estimatedQuantity,
       Market: quote.market,
       'Target delivery': quote.targetDelivery,
       Time: quote.createdAt,
     },
     details: [
-      ['Ingredient category', quote.productCategory],
-      ['Organization / application profile', quote.targetCustomerProfile],
-      ['Technical requirements', quote.specifications],
-      ['Materials', itemSummary],
+      ['Product category', quote.productCategory],
+      ['Target customer profile', quote.targetCustomerProfile],
+      ['Specifications', quote.specifications],
+      ['Items', itemSummary],
       ['Notes', quote.notes],
     ],
   }));

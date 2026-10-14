@@ -15,6 +15,7 @@ required('INCIDENT_RESPONSE_EMAIL', 'Incident response email');
 required('PRODUCT_COMPLIANCE_OWNER', 'Product compliance owner');
 
 if (String(process.env.JWT_SECRET || '').length < 32) failures.push('JWT_SECRET must contain at least 32 characters');
+if (String(process.env.ADMIN_PASSWORD || '').trim().length < 12) failures.push('ADMIN_PASSWORD must contain at least 12 characters');
 if (corsOrigins && (corsOrigins.includes('*') || corsOrigins.split(',').some((origin) => !origin.trim().startsWith('https://')))) failures.push('CORS_ORIGINS must contain only explicit HTTPS origins');
 if (!/^https:\/\/open\.larksuite\.com\/open-apis\/bot\/v2\/hook\//.test(String(process.env.LARK_WEBHOOK_URL || ''))) failures.push('A valid international Lark webhook URL is required');
 if (!String(process.env.LARK_WEBHOOK_SECRET || '').trim()) failures.push('Lark signing secret is required');

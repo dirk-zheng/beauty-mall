@@ -6,6 +6,8 @@ let mysql;
 let pool;
 let ready = false;
 let lastError = null;
+let memoryMode = false;
+const memoryVisitorEvents = [];
 
 const TABLES = {
   users: { table: 'users', key: 'visitor_id', data: 'user_data' },
@@ -32,7 +34,7 @@ function config() {
     port: Number(process.env.DB_PORT || 3306),
     user: process.env.DB_USER,
     password: process.env.DB_PASSWORD,
-    database: process.env.DB_NAME || 'aurelia_beauty_b2b',
+    database: process.env.DB_NAME || 'aurelia_pretty_b2b',
     connectionLimit: Number(process.env.DB_POOL_SIZE || 10),
     charset: 'utf8mb4',
   };
@@ -76,7 +78,16 @@ function prepareUpsert(name, key, value, extraValue) {
 
 async function initializeDatabase() {
   if (ready) return;
-  if (!process.env.DB_USER) throw new Error('DB_USER is required for the user-data database.');
+  if (!process.env.DB_USER) {
+    if ((process.env.NODE_ENV || 'development') === 'production') {
+      throw new Error('DB_USER is required for the user-data database.');
+    }
+    memoryMode = true;
+    ready = true;
+    lastError = null;
+    console.warn('DB_USER is not configured; using non-persistent in-memory storage for development.');
+    return;
+  }
   mysql = require('mysql2/promise');
   pool = mysql.createPool(config());
   await pool.query('SELECT 1');
@@ -101,6 +112,10 @@ function get(name, key) {
 
 async function upsert(name, key, value, extraValue) {
   const operation = prepareUpsert(name, key, value, extraValue);
+  if (memoryMode) {
+    cache[name].set(operation.recordKey, operation.value);
+    return;
+  }
   await pool.query(operation.sql, operation.values);
   cache[name].set(operation.recordKey, operation.value);
 }
@@ -110,6 +125,10 @@ async function upsertBatch(operations) {
     operation.name, operation.key, operation.value, operation.extraValue
   ));
   if (!prepared.length) return;
+  if (memoryMode) {
+    prepared.forEach((operation) => cache[operation.name].set(operation.recordKey, operation.value));
+    return;
+  }
   const connection = await pool.getConnection();
   try {
     await connection.beginTransaction();
@@ -130,6 +149,10 @@ async function remove(name, key) {
   assertStore(name);
   const definition = TABLES[name];
   const recordKey = String(key);
+  if (memoryMode) {
+    cache[name].delete(recordKey);
+    return;
+  }
   await pool.query(`DELETE FROM \`${definition.table}\` WHERE \`${definition.key}\` = ?`, [recordKey]);
   cache[name].delete(recordKey);
 }
@@ -137,6 +160,10 @@ async function remove(name, key) {
 async function replaceAll(name, records, keyField = 'id') {
   assertStore(name);
   const definition = TABLES[name];
+  if (memoryMode) {
+    cache[name] = new Map(records.map((record) => [String(record[keyField]), clone(record)]));
+    return;
+  }
   const connection = await pool.getConnection();
   try {
     await connection.beginTransaction();
@@ -162,9 +189,24 @@ async function replaceAll(name, records, keyField = 'id') {
 }
 
 async function recordVisitorEvent(input = {}) {
-  if (!pool) return;
   const eventId = input.id || uuidv4();
   const visitorId = normalizeVisitorId(input.visitorId);
+  if (memoryMode) {
+    if (!visitorId) return { recorded: false };
+    memoryVisitorEvents.push({
+      visitorId,
+      eventId,
+      account: String(input.account || '').trim().toLowerCase() || null,
+      eventType: input.eventType,
+      pagePath: input.pagePath || null,
+      entityType: input.entityType || null,
+      entityId: input.entityId || null,
+      data: clone(input.data || {}),
+      occurredAt: input.occurredAt || new Date().toISOString(),
+    });
+    return { recorded: true, visitorId, eventId };
+  }
+  if (!pool) return { recorded: false };
   const user = visitorId ? get('users', visitorId) : null;
   const account = String(input.account || user?.account || '').trim().toLowerCase() || null;
   if (!visitorId) return { recorded: false };
@@ -209,6 +251,13 @@ async function getBehaviorContext(account, currentVisitorId) {
   );
   const visitorIds = [...new Set(linkedUsers.map((item) => item.visitorId).filter(Boolean))];
   if (!visitorIds.length) return { currentVisitorId: normalizeVisitorId(currentVisitorId), visitorIds: [], events: [] };
+  if (memoryMode) {
+    return {
+      currentVisitorId: normalizeVisitorId(currentVisitorId),
+      visitorIds,
+      events: memoryVisitorEvents.filter((event) => visitorIds.includes(event.visitorId)).map(clone),
+    };
+  }
   const placeholders = visitorIds.map(() => '?').join(', ');
   const [rows] = await pool.query(
     `SELECT visitor_id, event_id, account, event_type, page_path, entity_type, entity_id, event_data, occurred_at
@@ -235,8 +284,8 @@ async function getBehaviorContext(account, currentVisitorId) {
 function getDatabaseStatus() {
   return {
     connected: ready,
-    engine: 'mysql',
-    scope: 'user-data-only',
+    engine: memoryMode ? 'memory' : 'mysql',
+    scope: memoryMode ? 'development-only-non-persistent' : 'user-data-only',
     error: lastError ? lastError.message : null,
   };
 }
@@ -245,6 +294,7 @@ async function closeDatabase() {
   if (pool) await pool.end();
   pool = null;
   ready = false;
+  memoryMode = false;
 }
 
 async function installSchema() {
