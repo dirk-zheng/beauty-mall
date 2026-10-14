@@ -43,3 +43,8 @@ New → Contacted → Qualified → Sampling → Quoted → Won / Lost
 - 每条询盘可记录跟进渠道、内容和下一次跟进时间；
 - 首页、服务、FAQ、文章、客服知识、SEO 和文档不再出现旧防护用品业务；
 - 客户端构建、JSON 和服务端语法检查通过。
+
+# 参考产品网址
+# Aurelia Beauty OEM/ODM Platform
+
+https://www.global-cosmetics.com/company-information/
