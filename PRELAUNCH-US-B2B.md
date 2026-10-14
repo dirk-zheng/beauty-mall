@@ -17,9 +17,8 @@ This checklist is operational guidance, not a substitute for advice from U.S. co
 
 - Replace legal-name and mailing-address placeholders in both server and client production environments.
 - Have U.S. counsel approve the Privacy Policy, Terms, governing law, venue, warranty, limitation, and sales documents.
-- Assign named owners for privacy requests, security incidents, and cosmetic raw-material compliance; document response procedures.
-- Obtain and retain material-specific specifications, INCI, TDS, SDS, representative and lot-specific COAs, origin and regulatory statements, batch/QC, change-control and traceability records before commercial supply.
-- Ensure customers understand that finished-formula safety, stability, preservation, claims, packaging compatibility and target-market compliance remain subject to their own validation and applicable agreements.
+- Assign named owners for privacy requests, security incidents, and product compliance; document response procedures.
+- Obtain and retain SKU-specific INCI, claims support, safety assessment, stability and packaging-compatibility results, batch/QC, label, warning, market-registration, and traceability records before offering goods.
 - Confirm importer of record, Incoterms, tariffs/duties, sanctions screening, state registrations/taxes, and insurance.
 - Add MFA for administrators/sellers and migrate browser JWT storage to secure HttpOnly cookies before handling high-value orders.
 - Configure encrypted backups, restoration testing, log monitoring, dependency scanning, and an incident-response drill.

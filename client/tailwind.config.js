@@ -7,9 +7,9 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: '#a05247',
-        secondary: '#c77b6e',
-        accent: '#8b695f',
+        primary: '#b42346',
+        secondary: '#146f9c',
+        accent: '#e9aa25',
         surface: 'rgba(255, 255, 255, 0.9)',
         'tech-gradient': {
           start: '#f8fafc',

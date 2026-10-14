@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { BookOpenText, Plus, Trash2 } from 'lucide-react';
 import { adminAPI } from '../api';
 
-const emptyForm = { title: '', slug: '', summary: '', content: '', image: '', category: 'active ingredients', status: 'draft' };
+const emptyForm = { title: '', slug: '', summary: '', content: '', image: '', category: 'products', status: 'draft' };
 
 export default function AdminArticles() {
   const [articles, setArticles] = useState([]);
@@ -21,7 +21,7 @@ export default function AdminArticles() {
     try {
       await adminAPI.createArticle(form);
       setForm(emptyForm);
-      setMessage('Ingredient resource saved. Rebuild the site to refresh prerendered SEO HTML and the sitemap.');
+      setMessage('Beauty resource saved. Rebuild the site to refresh prerendered SEO HTML and the sitemap.');
       await load();
     } catch (error) {
       setMessage(error.message);
@@ -30,7 +30,7 @@ export default function AdminArticles() {
     }
   };
   const remove = async (id) => {
-    if (!window.confirm('Delete this ingredient resource?')) return;
+    if (!window.confirm('Delete this beauty resource?')) return;
     await adminAPI.deleteArticle(id);
     await load();
   };
@@ -40,8 +40,8 @@ export default function AdminArticles() {
       <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <header className="mb-8">
           <p className="mb-2 text-sm font-semibold uppercase tracking-wider text-primary">Admin</p>
-          <h1 className="font-heading text-4xl font-bold text-slate-900">Ingredient resource publishing</h1>
-          <p className="mt-2 text-slate-500">Prepare formulation, raw-material qualification, processing and documentation articles for technical buyers.</p>
+          <h1 className="font-heading text-4xl font-bold text-slate-900">Beauty resource publishing</h1>
+          <p className="mt-2 text-slate-500">Prepare product, quality and partnership articles for protective-care buyers.</p>
         </header>
         <div className="grid gap-8 lg:grid-cols-[1fr_.9fr]">
           <form onSubmit={submit} className="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm">
@@ -51,7 +51,7 @@ export default function AdminArticles() {
                 <label key={name} className="block"><span className="mb-2 block text-sm font-semibold text-slate-700">{label}</span><input name={name} required={name === 'title' || name === 'summary'} value={form[name]} onChange={update} className="w-full rounded-xl border-slate-300" /></label>
               ))}
               <label className="block"><span className="mb-2 block text-sm font-semibold text-slate-700">Article content *</span><textarea name="content" required rows="12" value={form.content} onChange={update} className="w-full rounded-xl border-slate-300" /></label>
-              <label className="block"><span className="mb-2 block text-sm font-semibold text-slate-700">Category</span><select name="category" value={form.category} onChange={update} className="w-full rounded-xl border-slate-300"><option value="active ingredients">Active ingredients</option><option value="botanical extracts">Botanical extracts</option><option value="functional materials">Functional materials</option><option value="quality">Quality &amp; documentation</option></select></label>
+              <label className="block"><span className="mb-2 block text-sm font-semibold text-slate-700">Category</span><select name="category" value={form.category} onChange={update} className="w-full rounded-xl border-slate-300"><option value="products">Product Guides</option><option value="quality">Quality &amp; Claims</option><option value="partnerships">Partnerships</option></select></label>
               <label className="block"><span className="mb-2 block text-sm font-semibold text-slate-700">Status</span><select name="status" value={form.status} onChange={update} className="w-full rounded-xl border-slate-300"><option value="draft">Draft</option><option value="review">Ready for review</option><option value="published">Published</option></select></label>
             </div>
             {message && <p className="mt-5 rounded-xl bg-orange-50 p-4 text-sm text-orange-800">{message}</p>}

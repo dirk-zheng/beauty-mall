@@ -5,7 +5,7 @@ import { useAuth } from '../context/AuthContext';
 import wsClient from '../api/ws';
 import FloatingSupport from './FloatingSupport';
 
-const CLICKED_KEY = 'aurelia_beauty_support_clicked';
+const CLICKED_KEY = 'aurelia_pretty_support_clicked';
 
 //渲染:渲染SupportWidget组件或页面内容
 export default function SupportWidget() {
@@ -88,7 +88,7 @@ export default function SupportWidget() {
 
   if (isStaff) {
     return (
-      <Link to="/support/inbox" className="fixed bottom-6 right-6 z-50 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-primary to-secondary text-white shadow-lg shadow-primary/30 transition-transform hover:scale-110" title="Ingredient inquiry inbox" aria-label="Ingredient inquiry inbox">
+      <Link to="/support/inbox" className="fixed bottom-6 right-6 z-50 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-primary to-secondary text-white shadow-lg shadow-primary/30 transition-transform hover:scale-110" title="Beauty partnership inquiry inbox" aria-label="Beauty partnership inquiry inbox">
         {showDot && <span className="absolute -right-1 -top-1 flex min-h-[20px] min-w-[20px] items-center justify-center rounded-full border-[3px] border-white bg-red-500 px-1 text-[10px] font-bold text-white">{unreadCount > 99 ? '99+' : unreadCount || ''}</span>}
         <MessageCircle size={30} />
       </Link>
@@ -103,8 +103,8 @@ export default function SupportWidget() {
         className={`fixed bottom-6 right-6 h-[178px] w-[178px] rounded-full bg-gradient-to-br from-primary to-secondary shadow-2xl shadow-primary/30 flex items-center justify-center z-50 transition-all hover:scale-105 hover:shadow-2xl hover:shadow-primary/40 ${
           isOpen ? 'rotate-90' : ''
         }`}
-        title={isStaff ? 'Ingredient Messages' : 'Aurelia Beauty Support'}
-        aria-label={isOpen ? 'Close ingredient support' : 'Open ingredient support'}
+        title={isStaff ? 'Partner Messages' : 'Aurelia Pretty Partnership Support'}
+        aria-label={isOpen ? 'Close beauty partnership support' : 'Open beauty partnership support'}
       >
         {/* Big Red Dot */}
         {showDot && (

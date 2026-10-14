@@ -42,9 +42,9 @@ export default function Login() {
   };
 
   const features = [
-    { icon: Shield, text: 'Save ingredient sample and RFQ lists' },
-    { icon: Users, text: 'Connect with the technical sales team' },
-    { icon: Globe, text: 'For formulators, manufacturers and distributors' },
+    { icon: Shield, text: 'Save wholesale RFQ assortments' },
+    { icon: Users, text: 'Connect with the sales team' },
+    { icon: Globe, text: 'For qualified U.S. retailers' },
   ];
 
   return (
@@ -63,20 +63,20 @@ export default function Login() {
               <span className="text-white font-heading font-bold text-3xl">C</span>
             </div>
             <div>
-              <h1 className="font-heading text-3xl font-bold text-dark-900">Aurelia Beauty</h1>
-              <p className="text-dark-500">Technical Sourcing Portal</p>
+              <h1 className="font-heading text-3xl font-bold text-dark-900">Aurelia Pretty</h1>
+              <p className="text-dark-500">Beauty Partner Portal</p>
             </div>
           </div>
 
           <h2 className="text-4xl font-heading font-bold text-dark-900 mb-4 leading-tight">
             Welcome to<br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
-              Aurelia Beauty
+              Aurelia Pretty
             </span>
           </h2>
 
           <p className="text-dark-500 mb-8">
-            Sign in to build an ingredient sample list, organize qualification requirements and continue conversations with our technical sales team.
+            Sign in to build a sample edit, organize partnership requirements and continue conversations with our beauty team.
           </p>
 
           <div className="space-y-4">
